@@ -2,7 +2,7 @@ caq - Composed Application Quickstarter
 =======================================
 
 A simple [Bash] script for automated preparation of [Composer] based
-applications (i.e. ZendFramework apps).
+applications (i.e. [ZendFramework] apps).
 
 
 License
@@ -27,4 +27,41 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+Installation
+------------
+
+~~~~
+wget -nc \
+    https://raw.github.com/websafe/caq/caq.sh \
+    -O /usr/bin/caq
+chmod +x /usr/bin/caq
+~~~~
+
+
+`-ns` stands for `--no-clobber`:
+
+>  -nc, --no-clobber              skip downloads that would download to
+>                                 existing files (overwriting them).
+
+
+Usage
+-----
+
+~~~~
+caq myvendor/myapplication
+~~~~
+
+will create a folder `myapplication` in the current directory and initiate
+a default set of dependencies (currently hardoced, will change soon).
+
+
+Contributing
+------------
+
+ + Start using [caq]!
+ + [Report issues]
+ + [Request features]
+
 
