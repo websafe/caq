@@ -94,7 +94,7 @@ TODO
 [grep]: http://www.gnu.org/software/grep/
 [PHP]: http://php.net/
 [sed]: http://www.gnu.org/software/sed/
-[caq]: https://github.com/websafe/caq/
+[caq]: http://websafe.github.com/caq/
 [Report issues]: https://github.com/websafe/caq/issues
 [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
 
