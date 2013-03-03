@@ -148,6 +148,10 @@ ${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
 ##
 ${CMD_RM} -rf ${PROJECT_ABSPATH}/.gitmodules
 ##
+## Remove vendor/ZF2 firectory created ZendSkeletonApplication
+##
+${CMD_RM} -rf ${PROJECT_ABSPATH}/vendor/ZF2
+##
 ##
 ##
 ##
