@@ -114,6 +114,7 @@ else
                         -e "s/PROJECT_NAME/${project}/g" \
                         -e "s#PROJECT_HOMEPAGE#${homepage}#g" \
                         -e "s/PROJECT_KEYWORDS/${keywords}/g" \
+                        -e "s/PROJECT_LICENSE/${license}/g" \
                     > composer.json
                 ${CMD_PHP} vendor/bin/composer.phar config process-timeout 5000
                 #${CMD_PHP} vendor/bin/composer.phar -n update
