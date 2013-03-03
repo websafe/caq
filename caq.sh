@@ -54,7 +54,7 @@ DEFAULT_PROFILE=${DEFAULT_PROFILE:-zf2-app}
 CURRENT_PROFILE=${CURRENT_PROFILE:-$DEFAULT_PROFILE}
 ### ----------------------------------------------------------------------------
 ##
-##
+##    
 ##
 if [ -z ${1} ]; then
     echo "Usage: ${0} <vendor>/<project> <profile>"
@@ -65,10 +65,10 @@ else
     homepage="https://github.com/${vendor}/${project}"
     license="MIT"
     if [ ! -z "${2}" ]; then
-    	CURRENT_PROFILE=${2}
-	else
-		CURRENT_PROFILE=${DEFAULT_PROFILE}
-	fi
+        CURRENT_PROFILE=${2}
+    else
+        CURRENT_PROFILE=${DEFAULT_PROFILE}
+    fi
 fi
 ### ----------------------------------------------------------------------------
 SCRIPT_ABSDIR=$(${CMD_DIRNAME} $(${CMD_REALPATH} ${0}))
@@ -147,19 +147,19 @@ else
     ##
     ##
     ## -------------------------------------------------------------------------
-	if [ ! -d ${PROJECT_ABSPATH}/vendor ]; then 
-		${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor;
-	fi
-	if [ ! -d ${PROJECT_ABSPATH}/vendor/bin ]; then
-    	${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor/bin
-	fi
+    if [ ! -d ${PROJECT_ABSPATH}/vendor ]; then 
+        ${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor;
+    fi
+    if [ ! -d ${PROJECT_ABSPATH}/vendor/bin ]; then
+        ${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor/bin
+    fi
     if ${CMD_CURL} -s https://getcomposer.org/installer \
          | ${CMD_PHP} -- \
               -n \
               --install-dir="${PROJECT_ABSPATH}/vendor/bin";
     then
-	    echo "Installing [Composer] has finished."
-		##
+        echo "Installing [Composer] has finished."
+        ##
         ## ---------------------------------------------------------------------
         ##
         ##
@@ -190,15 +190,15 @@ else
                 > composer.json
             ${CMD_PHP} vendor/bin/composer.phar config process-timeout 5000
             #${CMD_PHP} vendor/bin/composer.phar -n update
-	        ## ----------------------------------------------------------------
-	        ##
-	        ##
-	        ##     Installing [Composer] packages for current profile.
-	        ##
-	        ##
-	        ## -----------------------------------------------------------------
+            ## ----------------------------------------------------------------
+            ##
+            ##
+            ##     Installing [Composer] packages for current profile.
+            ##
+            ##
+            ## -----------------------------------------------------------------
             for dep in $(
-					## extract profile data (located at the bottom of this file.
+                    ## extract profile data (located at the bottom of this file.
                     extractContent "PKG:${CURRENT_PROFILE}" \
                         | ${CMD_CUT} -d' ' -f1
                 );
@@ -207,11 +207,11 @@ else
                 if ${CMD_PHP} vendor/bin/composer.phar \
                     require -n "${dep}";
                 then
-                	echo "Installed ${dep}"
-            	else
-            		echo "Problem while installing ${dep}"
-            		exit 5;
-            	fi
+                    echo "Installed ${dep}"
+                else
+                    echo "Problem while installing ${dep}"
+                    exit 5;
+                fi
             done
         else
             echo "Problem while self-updating [Composer]."
@@ -219,9 +219,9 @@ else
         fi
     else
         ##
-    	echo "Problem while installing [Composer]."
+        echo "Problem while installing [Composer]."
         exit 4;
-	fi
+    fi
 fi
 ### ----------------------------------------------------------------------------
 ###
