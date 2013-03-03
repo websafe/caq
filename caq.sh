@@ -47,8 +47,6 @@ CMD_REALPATH=${CMD_REALPATH:=/usr/bin/realpath}
 CMD_RM=${CMD_RM:-/bin/rm}
 CMD_SED=${CMD_SED:-/usr/bin/sed}
 ### ----------------------------------------------------------------------------
-## Skeleton Application URI - the default is ZendSkeletonApplication:
-##SA_URI=${SA_URI:-git://github.com/zendframework/ZendSkeletonApplication.git}
 ## This default helps with composer timeouts on slow connections
 COMPOSER_PROCESS_TIMEOUT=${COMPOSER_PROCESS_TIMEOUT:-5000}
 ## Preparing for Profiles - the default profile is "zf2-app"
@@ -59,7 +57,7 @@ CURRENT_PROFILE=${CURRENT_PROFILE:-$DEFAULT_PROFILE}
 ##
 ##
 if [ -z ${1} ]; then
-    echo "Usage: ${0} <vendor>/<project>"
+    echo "Usage: ${0} <vendor>/<project> <profile>"
     exit 1;
 else
     vendor=$(echo ${1} | ${CMD_CUT} -d'/' -f1)
@@ -142,7 +140,6 @@ else
         fi
     fi
     echo "Cloning Skeleton Application finished."
-    read;
     ## -------------------------------------------------------------------------
     ##
     ##
@@ -162,7 +159,6 @@ else
               --install-dir="${PROJECT_ABSPATH}/vendor/bin";
     then
 	    echo "Installing [Composer] has finished."
-	    read;
 		##
         ## ---------------------------------------------------------------------
         ##
