@@ -29,8 +29,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+
 Installation
-------------
+--------------------------------------------------------------------------------
 
 ~~~~
 wget -nc \
@@ -47,25 +48,74 @@ chmod +x /usr/bin/caq
 
 
 Usage
------
+--------------------------------------------------------------------------------
+
+Basic usage is:
 
 ~~~~
-caq myvendor/myapplication
+caq <vendor>/<project> [<profile>]
 ~~~~
 
-will create a folder `myapplication` in the current directory and initiate
-a default set of dependencies (currently hardoced, will change soon).
 
+This will create a project located in directory `./myzf2app` based 
+on [ZendSkeletonApplication] with [ZendFramework] installed as [Composer] 
+package in `./vendor/zendframework`:
+
+~~~~
+caq myvendor/myzf2app zf2-app
+~~~~
+
+
+This will create a project located in directory `./myzf2app` based 
+on nothing (no skeleton application) with [ZendFramework] installed as 
+[Composer] package in `./vendor/zendframework`, in other words, a project
+with the pure framework, no application:
+
+~~~~
+caq myvendor/myzf2project zf2
+~~~~
+
+
+This will create a project located in directory `./mysymfonyproject` based 
+on nothing (no skeleton application) with [Symfony] installed as [Composer] 
+package in `./vendor/symfony`:
+
+~~~~
+caq myvendor/mysymfonyproject symfony
+~~~~
 
 Contributing
-------------
+--------------------------------------------------------------------------------
 
  + Start using [caq]!
  + [Report issues]
  + [Request features]
+ + Read
+   [14 Ways to Contribute to Open Source without Being a Programming Genius]
 
 
+Requirements
+--------------------------------------------------------------------------------
 
+ + [Bash]
+ + [Composer]
+ + [Git]
+ + [grep]
+ + [PHP]
+ + [sed]
+
+
+TODO
+--------------------------------------------------------------------------------
+
+ + User configs profiles in ~/.caq/
+ + User templates for faster creation of projects (stored in ~/.caq/templates)
+ + Plugins
+ + Profiles testsuite
+ + travis
+ + initiate local git repository for generated project
+ + Windows/Cygwin compatible
+ 
 [Bash]: http://www.gnu.org/software/bash/bash.html
 [Composer]: http://getcomposer.org/
 [ZendFramework]: http://framework.zend.com/
@@ -75,7 +125,8 @@ Contributing
 [grep]: http://www.gnu.org/software/grep/
 [PHP]: http://php.net/
 [sed]: http://www.gnu.org/software/sed/
-[caq]: https://github.com/websafe/caq/
+[caq]: http://websafe.github.com/caq/
 [Report issues]: https://github.com/websafe/caq/issues
 [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
-
+[Symfony]: http://symfony.com/
+[14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star

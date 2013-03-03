@@ -1,10 +1,36 @@
 Usage
------
+--------------------------------------------------------------------------------
+
+Basic usage is:
 
 ~~~~
-caq myvendor/myapplication
+caq <vendor>/<project> [<profile>]
 ~~~~
 
-will create a folder `myapplication` in the current directory and initiate
-a default set of dependencies (currently hardoced, will change soon).
 
+This will create a project located in directory `./myzf2app` based 
+on [ZendSkeletonApplication] with [ZendFramework] installed as [Composer] 
+package in `./vendor/zendframework`:
+
+~~~~
+caq myvendor/myzf2app zf2-app
+~~~~
+
+
+This will create a project located in directory `./myzf2app` based 
+on nothing (no skeleton application) with [ZendFramework] installed as 
+[Composer] package in `./vendor/zendframework`, in other words, a project
+with the pure framework, no application:
+
+~~~~
+caq myvendor/myzf2project zf2
+~~~~
+
+
+This will create a project located in directory `./mysymfonyproject` based 
+on nothing (no skeleton application) with [Symfony] installed as [Composer] 
+package in `./vendor/symfony`:
+
+~~~~
+caq myvendor/mysymfonyproject symfony
+~~~~

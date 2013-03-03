@@ -10,8 +10,21 @@
         "development",
         "composer"
     ],
-    "homepage": "https://github.com/websafe/caq/",
+    "homepage": "http://websafe.github.com/caq/",
+    {
+        "authors": [
+            {
+                "name": "Thomas Szteliga",
+                "email": "ts@websafe.pl",
+                "homepage": "https://websafe.pl/",
+                "role": "Developer"
+            }
+        ]
+    },
     "require": {
         "php": ">=5.3.3",
-    }
+    },
+    "bin": [
+        "caq.sh"
+    ]
 }

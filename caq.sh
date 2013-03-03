@@ -29,10 +29,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 # 
+# 
 ## -----------------------------------------------------------------------------
 set -e
 ## -----------------------------------------------------------------------------
 CMD_CP=${CMD_CP:-/usr/bin/cp}
+CMD_CURL=${CMD_CURL:-/usr/bin/curl}
 CMD_CUT=${CMD_CUT:-/usr/bin/cut}
 CMD_DIRNAME=${CMD_DIRNAME:-/usr/bin/dirname}
 CMD_GIT=${CMD_GIT:-/usr/bin/git}
@@ -45,33 +47,44 @@ CMD_REALPATH=${CMD_REALPATH:=/usr/bin/realpath}
 CMD_RM=${CMD_RM:-/bin/rm}
 CMD_SED=${CMD_SED:-/usr/bin/sed}
 ### ----------------------------------------------------------------------------
-## Zend Skeleton Application git repository:
-ZFSA_URI=${ZFSA_URI:-git://github.com/zendframework/ZendSkeletonApplication.git}
 ## This default helps with composer timeouts on slow connections
 COMPOSER_PROCESS_TIMEOUT=${COMPOSER_PROCESS_TIMEOUT:-5000}
-### ----------------------------------------------------------------------------
-function extractContent() {
-    local contentId=${1}
-    ${CMD_GREP} -E "^### ${contentId}:" \
-        ${SCRIPT_ABSPATH} | ${CMD_CUT} -d':' -f3-
-}
+## Preparing for Profiles - the default profile is "zf2-app"
+DEFAULT_PROFILE=${DEFAULT_PROFILE:-zf2-app}
+CURRENT_PROFILE=${CURRENT_PROFILE:-$DEFAULT_PROFILE}
 ### ----------------------------------------------------------------------------
 ##
-##
+##    
 ##
 if [ -z ${1} ]; then
-    echo "Usage: ${0} <vendor>/<project>"
+    echo "Usage: ${0} <vendor>/<project> <profile>"
     exit 1;
 else
     vendor=$(echo ${1} | ${CMD_CUT} -d'/' -f1)
     project=$(echo ${1} | ${CMD_CUT} -d'/' -f2)
     homepage="https://github.com/${vendor}/${project}"
     license="MIT"
+    if [ ! -z "${2}" ]; then
+        CURRENT_PROFILE=${2}
+    else
+        CURRENT_PROFILE=${DEFAULT_PROFILE}
+    fi
 fi
 ### ----------------------------------------------------------------------------
 SCRIPT_ABSDIR=$(${CMD_DIRNAME} $(${CMD_REALPATH} ${0}))
 SCRIPT_ABSPATH=$(${CMD_REALPATH} ${0})
 PROJECT_ABSPATH=$(${CMD_REALPATH} ${project})
+### ----------------------------------------------------------------------------
+function extractContent() {
+    local contentId=${1}
+    ${CMD_GREP} -E "^### ${contentId}:" \
+        ${SCRIPT_ABSPATH} | ${CMD_CUT} -d':' -f3-
+}
+function getCurrentProfileVariable() {
+    local variableName=${1}
+    local profileName=${CURRENT_PROFILE}
+    extractContent "${variableName}:${profileName}"
+}
 ### ----------------------------------------------------------------------------
 ##
 ## Check if project directory exists...
@@ -81,25 +94,108 @@ then
     echo "Directory ${PROJECT_ABSPATH} exists! Choose another one."
     exit 2
 else
+    ## -------------------------------------------------------------------------
     ##
-    ## Clone Zend Skeleton Application into ${project} directory...
     ##
-    if ${CMD_GIT} clone ${ZFSA_URI} ${PROJECT_ABSPATH};
+    ##    Creating project directory.
+    ##
+    ##
+    ## -------------------------------------------------------------------------
+    ${CMD_MKDIR} ${PROJECT_ABSPATH}
+    ## -------------------------------------------------------------------------
+    ##
+    ##
+    ##    Cloning Skeleton Application if it's configured (non-empty)
+    ##
+    ##
+    ## -------------------------------------------------------------------------
+    SA_URI=$(getCurrentProfileVariable "SA");
+    ##
+    ## If SA (Skeleton Application Uri) is empty
+    ##
+    if [ -z "${SA_URI}" ];
     then
+        echo "No skeleton for current profile.";
+    else
         ##
-        cd ${PROJECT_ABSPATH}
+        ## Clone Skeleton Application into ${project} directory...
         ##
-        ## Cloned app contains composer.phar, often out-dated, so...
-        ##
-        if ${CMD_PHP} ./composer.phar -n selfupdate;
+        if ${CMD_GIT} clone ${SA_URI} ${PROJECT_ABSPATH};
         then
             ##
-            ## Create destination dir for vendor "binaries"...
+            ## Remove git data of Skeleton Application
             ##
-            ${CMD_MKDIR} -p vendor/bin
+            ${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
             ##
-            ## Move composer.phar to its final destination (vendor/bin)
+            ## Remove .gitmodules created Skeleton Application
             ##
+            ${CMD_RM} -rf ${PROJECT_ABSPATH}/.gitmodules
+            ##
+            ## Remove vendor/ZF2 firectory created if SA was ZendSkeletonApp...
+            ##
+            ${CMD_RM} -rf ${PROJECT_ABSPATH}/vendor/ZF2
+        else
+            echo "Problem while cloning Skeleton Application."
+            exit 5;
+        fi
+    fi
+    echo "Cloning Skeleton Application finished."
+    ## -------------------------------------------------------------------------
+    ##
+    ##
+    ##     Installing [Composer].
+    ##
+    ##
+    ## -------------------------------------------------------------------------
+    if [ ! -d ${PROJECT_ABSPATH}/vendor ]; then 
+        ${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor;
+    fi
+    if [ ! -d ${PROJECT_ABSPATH}/vendor/bin ]; then
+        ${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor/bin
+    fi
+    if ${CMD_CURL} -s https://getcomposer.org/installer \
+         | ${CMD_PHP} -- \
+              -n \
+              --install-dir="${PROJECT_ABSPATH}/vendor/bin";
+    then
+        echo "Installing [Composer] has finished."
+        ##
+        ## ---------------------------------------------------------------------
+        ##
+        ##
+        ##     Switching to project directory.
+        ##
+        ##
+        ## ---------------------------------------------------------------------
+        cd ${PROJECT_ABSPATH}
+        ## ---------------------------------------------------------------------
+        ##
+        ##
+        ##     Self-updating [Composer].
+        ##
+        ##
+        ## ---------------------------------------------------------------------
+        if ${CMD_PHP} ./vendor/bin/composer.phar -n selfupdate;
+        then
+            ##
+            ##
+            ##
+            extractContent "CJ:default" \
+                | ${CMD_SED} \
+                    -e "s/PROJECT_VENDOR/${vendor}/g" \
+                    -e "s/PROJECT_NAME/${project}/g" \
+                    -e "s#PROJECT_HOMEPAGE#${homepage}#g" \
+                    -e "s/PROJECT_KEYWORDS/${keywords}/g" \
+                    -e "s/PROJECT_LICENSE/${license}/g" \
+                > composer.json
+            ${CMD_PHP} vendor/bin/composer.phar config process-timeout 5000
+            #${CMD_PHP} vendor/bin/composer.phar -n update
+            ## ----------------------------------------------------------------
+            ##
+            ##
+            ##     Installing [Composer] packages for current profile.
+            ##
+<<<<<<< HEAD
             if ${CMD_MV} composer.phar vendor/bin/;
             then
                 extractContent "CJSON:default" \
@@ -131,60 +227,101 @@ else
                 echo "Problem while moving composer to its final destination."
                 exit 3;
             fi
+=======
+            ##
+            ## -----------------------------------------------------------------
+            for dep in $(
+                    ## extract profile data (located at the bottom of this file.
+                    extractContent "PKG:${CURRENT_PROFILE}" \
+                        | ${CMD_CUT} -d' ' -f1
+                );
+            do
+                ## Install dependency (composer.json gets updated too):
+                if ${CMD_PHP} vendor/bin/composer.phar \
+                    require -n "${dep}";
+                then
+                    echo "Installed ${dep}"
+                else
+                    echo "Problem while installing ${dep}"
+                    exit 5;
+                fi
+            done
+>>>>>>> develop
         else
-            echo "Problem while self-updating composer."
+            echo "Problem while self-updating [Composer]."
             exit 4;
         fi
     else
-        echo "Problem while cloning Zend Skeleton Application."
-        exit 5;
+        ##
+        echo "Problem while installing [Composer]."
+        exit 4;
     fi
 fi
-##
-## Remove git data of ZendSkeletonApplication
-##
-${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
-##
-##
-##
-##
 ### ----------------------------------------------------------------------------
-### COMPOSERDEPS:default:zendframework/zendframework:2.1.3
-### COMPOSERDEPS:default:zendframework/zend-developer-tools:*
-### COMPOSERDEPS:default:zf-commons/zfc-user:*
-### COMPOSERDEPS:default:zendframework/zendpdf:*
-### COMPOSERDEPS:default:fabpot/PHP-CS-Fixer:*
-### COMPOSERDEPS:default:squizlabs/PHP_CodeSniffer:*
-### COMPOSERDEPS:default:phpunit/PHPUnit:3.7.*
-### COMPOSERDEPS:default:phpunit/php-invoker:*
-### COMPOSERDEPS:default:doctrine/common:*
-### COMPOSERDEPS:default:doctrine/doctrine-orm-module:*
-### COMPOSERDEPS:default:doctrine/phpcr-odm:*
-### COMPOSERDEPS:default:doctrine/data-fixtures:*
-### COMPOSERDEPS:default:doctrine/migrations:*
-### COMPOSERDEPS:default:symfony/yaml:*
-### COMPOSERDEPS:default:bjyoungblood/bjy-profiler:*
-### COMPOSERDEPS:default:phpdocumentor/phpdocumentor:*
-## And a few not working (## not ### so will be ignored)
-## zfc-base will be automatically installed by zfc-user
-## COMPOSERDEPS:default:zf-commons/zfc-base:*
-## suggested by zendframework but not available yet? 
-## COMPOSERDEPS:default:zendframework/zendservice-recaptcha:*
-## no mongo support on my machine ;>
-## COMPOSERDEPS:default:doctrine/mongodb-odm:*
+###
+### caq
+###
+### PROFILE:caq:stability:stable
+### SA:caq:git://github.com/websafe/caq.git
 ## -----------------------------------------------------------------------------
-### CJSON:default:{
-### CJSON:default:    "name": "PROJECT_VENDOR/PROJECT_NAME",
-### CJSON:default:    "description": "PROJECT_DESCRIPTION",
-### CJSON:default:    "license": "PROJECT_LICENSE",
-### CJSON:default:    "keywords": [
-### CJSON:default:        PROJECT_KEYWORDS
-### CJSON:default:    ],
-### CJSON:default:    "homepage": "PROJECT_HOMEPAGE",
-### CJSON:default:    "require": {
-### CJSON:default:        "php": ">=5.3.3"
-### CJSON:default:    },
-### CJSON:default:    "minimum-stability": "dev"
-### CJSON:default:}
+###
+### Pure ZendFramework 2 project without Skeleton, only framework in vendors/.
+###
+### PROFILE:zf2:stability:stable
+### SA:zf2:
+### PKG:zf2:zendframework/zendframework:2.1.3
+## -----------------------------------------------------------------------------
+###
+### ZendFramework 2 project with Skeleton Application.
+###
+### PROFILE:zf2-app:stability:stable
+### SA:zf2-app:git://github.com/zendframework/ZendSkeletonApplication.git
+### PKG:zf2-app:zendframework/zendframework:2.1.3
+## -----------------------------------------------------------------------------
+###
+### ZendFramework 2 project with Skeleton Application and lot of useful deps
+###
+### PROFILE:zf2-app-full:stability:stable
+### SA:zf2-app-full:git://github.com/zendframework/ZendSkeletonApplication.git
+### PKG:zf2-app-full:zendframework/zendframework:2.1.3
+### PKG:zf2-app-full:zendframework/zend-developer-tools:*
+### PKG:zf2-app-full:zf-commons/zfc-user:*
+### PKG:zf2-app-full:zendframework/zendpdf:*
+### PKG:zf2-app-full:fabpot/PHP-CS-Fixer:*
+### PKG:zf2-app-full:squizlabs/PHP_CodeSniffer:*
+### PKG:zf2-app-full:phpunit/PHPUnit:3.7.*
+### PKG:zf2-app-full:phpunit/php-invoker:*
+### PKG:zf2-app-full:doctrine/common:*
+### PKG:zf2-app-full:doctrine/doctrine-orm-module:*
+### PKG:zf2-app-full:doctrine/phpcr-odm:*
+### PKG:zf2-app-full:doctrine/data-fixtures:*
+### PKG:zf2-app-full:doctrine/migrations:*
+### PKG:zf2-app-full:symfony/yaml:*
+### PKG:zf2-app-full:bjyoungblood/bjy-profiler:*
+### PKG:zf2-app-full:phpdocumentor/phpdocumentor:*
+## -----------------------------------------------------------------------------
+###
+### Symfony Framework project.
+###
+### PROFILE:symfony:stability:stable
+### SA:symfony:
+### PKG:symfony:symfony/framework-standard-edition:2.1.x-dev
+## -----------------------------------------------------------------------------
+###
+### Default template for composer.json.
+###
+### CJ:default:{
+### CJ:default:    "name": "PROJECT_VENDOR/PROJECT_NAME",
+### CJ:default:    "description": "PROJECT_DESCRIPTION",
+### CJ:default:    "license": "PROJECT_LICENSE",
+### CJ:default:    "keywords": [
+### CJ:default:        PROJECT_KEYWORDS
+### CJ:default:    ],
+### CJ:default:    "homepage": "PROJECT_HOMEPAGE",
+### CJ:default:    "require": {
+### CJ:default:        "php": ">=5.3.3"
+### CJ:default:    },
+### CJ:default:    "minimum-stability": "dev"
+### CJ:default:}
 ## -----------------------------------------------------------------------------
 ## EOF
