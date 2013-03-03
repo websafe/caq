@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Caq by websafe</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Caq</h1>
+        <p>Composed Application Quickstarter - A simple Bash script for automated preparation of Composer based applications</p>
+
+        <p class="view"><a href="https://github.com/websafe/caq">View the Project on GitHub <small>websafe/caq</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/websafe/caq/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/websafe/caq/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/websafe/caq">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>caq - Composed Application Quickstarter</h1>
+
+<p>A simple <a href="http://www.gnu.org/software/bash/bash.html">Bash</a> script for automated preparation of <a href="http://getcomposer.org/">Composer</a> based
+applications (i.e. <a href="http://framework.zend.com/">ZendFramework</a> apps).</p>
+
+<h2>License</h2>
+
+<p>Copyright (c) 2013 Thomas Szteliga <a href="mailto:ts@websafe.pl">ts@websafe.pl</a>, <a href="http://websafe.pl/">http://websafe.pl/</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+<h2>Installation</h2>
+
+<pre><code>wget -nc \
+    https://raw.github.com/websafe/caq/caq.sh \
+    -O /usr/bin/caq
+chmod +x /usr/bin/caq
+</code></pre>
+
+<p><code>-ns</code> stands for <code>--no-clobber</code>:</p>
+
+<blockquote>
+<p>-nc, --no-clobber              skip downloads that would download to
+                                existing files (overwriting them).</p>
+</blockquote>
+
+<h2>Usage</h2>
+
+<pre><code>caq myvendor/myapplication
+</code></pre>
+
+<p>will create a folder <code>myapplication</code> in the current directory and initiate
+a default set of dependencies (currently hardoced, will change soon).</p>
+
+<h2>Contributing</h2>
+
+<ul>
+<li>Start using <a href="https://github.com/websafe/caq/">caq</a>!</li>
+<li><a href="https://github.com/websafe/caq/issues">Report issues</a></li>
+<li><a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a></li>
+</ul><h2>Requirements</h2>
+
+<ul>
+<li><a href="http://www.gnu.org/software/bash/bash.html">Bash</a></li>
+<li><a href="http://getcomposer.org/">Composer</a></li>
+<li><a href="http://git-scm.com/">Git</a></li>
+<li><a href="http://www.gnu.org/software/grep/">grep</a></li>
+<li><a href="http://php.net/">PHP</a></li>
+<li><a href="http://www.gnu.org/software/sed/">sed</a></li>
+</ul><h2>TODO</h2>
+
+<ul>
+<li>User configs profiles in ~/.caq/</li>
+<li>User templates for faster creation of projects (stored in ~/.caq/templates)</li>
+<li>Plugins</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/websafe">websafe</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
