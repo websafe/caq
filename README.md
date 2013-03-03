@@ -66,6 +66,25 @@ Contributing
 
 
 
+Requirements
+------------
+
+ + [Bash]
+ + [Composer]
+ + [Git]
+ + [grep]
+ + [PHP]
+ + [sed]
+
+
+TODO
+----
+
+ + User configs profiles in ~/.caq/
+ + User templates for faster creation of projects (stored in ~/.caq/templates)
+ + Plugins
+
+
 [Bash]: http://www.gnu.org/software/bash/bash.html
 [Composer]: http://getcomposer.org/
 [ZendFramework]: http://framework.zend.com/
