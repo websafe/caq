@@ -195,39 +195,6 @@ else
             ##
             ##     Installing [Composer] packages for current profile.
             ##
-<<<<<<< HEAD
-            if ${CMD_MV} composer.phar vendor/bin/;
-            then
-                extractContent "CJSON:default" \
-                    | ${CMD_SED} \
-                        -e "s/PROJECT_VENDOR/${vendor}/g" \
-                        -e "s/PROJECT_NAME/${project}/g" \
-                        -e "s#PROJECT_HOMEPAGE#${homepage}#g" \
-                        -e "s/PROJECT_KEYWORDS/${keywords}/g" \
-                        -e "s/PROJECT_LICENSE/${license}/g" \
-                    > composer.json
-                ${CMD_PHP} vendor/bin/composer.phar config process-timeout 5000
-                #${CMD_PHP} vendor/bin/composer.phar -n update
-                ##
-                ## Install dependencies found at the end of this file
-                ## in lines starting with '## COMPOSERDEPS:default:'
-                ##
-                for dep in $(
-                        extractContent "COMPOSERDEPS:default" \
-                            | ${CMD_CUT} -d' ' -f1
-                    );
-                do
-                    ##
-                    ## Install dependency (composer.json gets updated too):
-                    ##
-                    ${CMD_PHP} vendor/bin/composer.phar \
-                        require -n "${dep}"
-                done
-            else
-                echo "Problem while moving composer to its final destination."
-                exit 3;
-            fi
-=======
             ##
             ## -----------------------------------------------------------------
             for dep in $(
@@ -246,7 +213,6 @@ else
                     exit 5;
                 fi
             done
->>>>>>> develop
         else
             echo "Problem while self-updating [Composer]."
             exit 4;
