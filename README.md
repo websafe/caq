@@ -31,7 +31,7 @@ THE SOFTWARE.
 
 
 Installation
-------------
+--------------------------------------------------------------------------------
 
 ~~~~
 wget -nc \
@@ -48,7 +48,7 @@ chmod +x /usr/bin/caq
 
 
 Usage
------
+--------------------------------------------------------------------------------
 
 Basic usage is:
 
@@ -85,16 +85,16 @@ caq myvendor/mysymfonyproject symfony
 ~~~~
 
 Contributing
-------------
+--------------------------------------------------------------------------------
 
  + Start using [caq]!
  + [Report issues]
  + [Request features]
- + Read [14 Ways to Contribute to Open Source without Being a Programming Genius or a Rock Star]
+ + Read [14 Ways to Contribute to Open Source without Being a Programming Genius]
 
 
 Requirements
-------------
+--------------------------------------------------------------------------------
 
  + [Bash]
  + [Composer]
@@ -105,7 +105,7 @@ Requirements
 
 
 TODO
-----
+--------------------------------------------------------------------------------
 
  + User configs profiles in ~/.caq/
  + User templates for faster creation of projects (stored in ~/.caq/templates)
@@ -128,4 +128,4 @@ TODO
 [Report issues]: https://github.com/websafe/caq/issues
 [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
 [Symfony]: http://symfony.com/
-[14 Ways to Contribute to Open Source without Being a Programming Genius or a Rock Star]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
+[14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
