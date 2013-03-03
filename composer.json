@@ -10,7 +10,7 @@
         "development",
         "composer"
     ],
-    "homepage": "https://github.com/websafe/caq/",
+    "homepage": "http://websafe.github.com/caq/",
     "require": {
         "php": ">=5.3.3",
     },
