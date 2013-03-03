@@ -52,8 +52,30 @@ CMD_SED=${CMD_SED:-/usr/bin/sed}
 ## This default helps with composer timeouts on slow connections
 COMPOSER_PROCESS_TIMEOUT=${COMPOSER_PROCESS_TIMEOUT:-5000}
 ## Preparing for Profiles - the default profile is "zf2-app"
-DEFAULT_PROFILE=${DEFAULT_PROFILE:-symfony}
+DEFAULT_PROFILE=${DEFAULT_PROFILE:-zf2-app}
 CURRENT_PROFILE=${CURRENT_PROFILE:-$DEFAULT_PROFILE}
+### ----------------------------------------------------------------------------
+##
+##
+##
+if [ -z ${1} ]; then
+    echo "Usage: ${0} <vendor>/<project>"
+    exit 1;
+else
+    vendor=$(echo ${1} | ${CMD_CUT} -d'/' -f1)
+    project=$(echo ${1} | ${CMD_CUT} -d'/' -f2)
+    homepage="https://github.com/${vendor}/${project}"
+    license="MIT"
+    if [ ! -z "${2}" ]; then
+    	CURRENT_PROFILE=${2}
+	else
+		CURRENT_PROFILE=${DEFAULT_PROFILE}
+	fi
+fi
+### ----------------------------------------------------------------------------
+SCRIPT_ABSDIR=$(${CMD_DIRNAME} $(${CMD_REALPATH} ${0}))
+SCRIPT_ABSPATH=$(${CMD_REALPATH} ${0})
+PROJECT_ABSPATH=$(${CMD_REALPATH} ${project})
 ### ----------------------------------------------------------------------------
 function extractContent() {
     local contentId=${1}
@@ -67,23 +89,6 @@ function getCurrentProfileVariable() {
 }
 ### ----------------------------------------------------------------------------
 ##
-##
-##
-if [ -z ${1} ]; then
-    echo "Usage: ${0} <vendor>/<project>"
-    exit 1;
-else
-    vendor=$(echo ${1} | ${CMD_CUT} -d'/' -f1)
-    project=$(echo ${1} | ${CMD_CUT} -d'/' -f2)
-    homepage="https://github.com/${vendor}/${project}"
-    license="MIT"
-fi
-### ----------------------------------------------------------------------------
-SCRIPT_ABSDIR=$(${CMD_DIRNAME} $(${CMD_REALPATH} ${0}))
-SCRIPT_ABSPATH=$(${CMD_REALPATH} ${0})
-PROJECT_ABSPATH=$(${CMD_REALPATH} ${project})
-### ----------------------------------------------------------------------------
-##
 ## Check if project directory exists...
 ##
 if [ -d ${PROJECT_ABSPATH} ];
@@ -94,13 +99,11 @@ else
     ## -------------------------------------------------------------------------
     ##
     ##
-    ##    Creating basic project directories.
+    ##    Creating project directory.
     ##
     ##
     ## -------------------------------------------------------------------------
     ${CMD_MKDIR} ${PROJECT_ABSPATH}
-    ${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor
-    ${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor/bin
     ## -------------------------------------------------------------------------
     ##
     ##
@@ -138,6 +141,8 @@ else
             exit 5;
         fi
     fi
+    echo "Cloning Skeleton Application finished."
+    read;
     ## -------------------------------------------------------------------------
     ##
     ##
@@ -145,12 +150,20 @@ else
     ##
     ##
     ## -------------------------------------------------------------------------
+	if [ ! -d ${PROJECT_ABSPATH}/vendor ]; then 
+		${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor;
+	fi
+	if [ ! -d ${PROJECT_ABSPATH}/vendor/bin ]; then
+    	${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor/bin
+	fi
     if ${CMD_CURL} -s https://getcomposer.org/installer \
          | ${CMD_PHP} -- \
               -n \
               --install-dir="${PROJECT_ABSPATH}/vendor/bin";
     then
-        ##
+	    echo "Installing [Composer] has finished."
+	    read;
+		##
         ## ---------------------------------------------------------------------
         ##
         ##
@@ -215,6 +228,12 @@ else
 	fi
 fi
 ### ----------------------------------------------------------------------------
+###
+### caq
+###
+### PROFILE:caq:stability:stable
+### SA:caq:git://github.com/websafe/caq.git
+## -----------------------------------------------------------------------------
 ###
 ### Pure ZendFramework 2 project without Skeleton, only framework in vendors/.
 ###
