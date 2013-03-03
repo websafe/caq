@@ -144,6 +144,10 @@ fi
 ##
 ${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
 ##
+## Remove .gitmodules created ZendSkeletonApplication
+##
+${CMD_RM} -rf ${PROJECT_ABSPATH}/.gitmodules
+##
 ##
 ##
 ##
