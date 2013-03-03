@@ -1,0 +1,17 @@
+{
+    "name": "websafe/caq",
+    "description": "Composed Application Quickstarter",
+    "license": "MIT",
+    "keywords": [
+        "bash",
+        "php",
+        "quickstart",
+        "project",
+        "development",
+        "composer"
+    ],
+    "homepage": "https://github.com/websafe/caq/",
+    "require": {
+        "php": ">=5.3.3",
+    }
+}
