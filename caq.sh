@@ -82,7 +82,7 @@ then
     exit 2
 else
     ##
-    ## Clone ZendSkeletonApplication into ${project} directory...
+    ## Clone Skeleton Application into ${project} directory...
     ##
     if ${CMD_GIT} clone ${SA_URI} ${PROJECT_ABSPATH};
     then
@@ -150,7 +150,7 @@ else
             exit 4;
         fi
     else
-        echo "Problem while cloning Zend Skeleton Application."
+        echo "Problem while cloning Skeleton Application."
         exit 5;
     fi
 fi
