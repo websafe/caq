@@ -13,5 +13,8 @@
     "homepage": "https://github.com/websafe/caq/",
     "require": {
         "php": ">=5.3.3",
-    }
+    },
+    "bin": [
+        "caq.sh"
+    ]
 }
