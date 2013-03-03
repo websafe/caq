@@ -87,9 +87,17 @@ else
     if ${CMD_GIT} clone ${SA_URI} ${PROJECT_ABSPATH};
     then
         ##
-	## Remove git data of ZendSkeletonApplication
-	##
-	${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
+        ## Remove git data of Skeleton Application
+        ##
+        ${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
+        ##
+        ## Remove .gitmodules created Skeleton Application
+        ##
+        ${CMD_RM} -rf ${PROJECT_ABSPATH}/.gitmodules
+        ##
+        ## Remove vendor/ZF2 firectory created if SA was ZendSkeletonApp...
+        ##
+        ${CMD_RM} -rf ${PROJECT_ABSPATH}/vendor/ZF2
         ##
         ##
         ##
@@ -146,18 +154,6 @@ else
         exit 5;
     fi
 fi
-##
-## Remove .gitmodules created ZendSkeletonApplication
-##
-${CMD_RM} -rf ${PROJECT_ABSPATH}/.gitmodules
-##
-## Remove vendor/ZF2 firectory created ZendSkeletonApplication
-##
-${CMD_RM} -rf ${PROJECT_ABSPATH}/vendor/ZF2
-##
-##
-##
-##
 ### ----------------------------------------------------------------------------
 ### COMPOSERDEPS:default:zendframework/zendframework:2.1.3
 ### COMPOSERDEPS:default:zendframework/zend-developer-tools:*
