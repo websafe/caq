@@ -82,10 +82,16 @@ then
     exit 2
 else
     ##
-    ## Clone Zend Skeleton Application into ${project} directory...
+    ## Clone ZendSkeletonApplication into ${project} directory...
     ##
     if ${CMD_GIT} clone ${ZFSA_URI} ${PROJECT_ABSPATH};
     then
+        ##
+	## Remove git data of ZendSkeletonApplication
+	##
+	${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
+        ##
+        ##
         ##
         cd ${PROJECT_ABSPATH}
         ##
@@ -139,10 +145,6 @@ else
         exit 5;
     fi
 fi
-##
-## Remove git data of ZendSkeletonApplication
-##
-${CMD_RM} -rf ${PROJECT_ABSPATH}/.git
 ##
 ## Remove .gitmodules created ZendSkeletonApplication
 ##
