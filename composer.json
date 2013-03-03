@@ -12,14 +12,14 @@
     ],
     "homepage": "http://websafe.github.com/caq/",
     {
-    "authors": [
+        "authors": [
             {
-            "name": "Thomas Szteliga",
-            "email": "ts@websafe.pl",
-            "homepage": "https://websafe.pl/",
-            "role": "Developer"
+                "name": "Thomas Szteliga",
+                "email": "ts@websafe.pl",
+                "homepage": "https://websafe.pl/",
+                "role": "Developer"
             }
-    ]
+        ]
     },
     "require": {
         "php": ">=5.3.3",
