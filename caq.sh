@@ -45,8 +45,8 @@ CMD_REALPATH=${CMD_REALPATH:=/usr/bin/realpath}
 CMD_RM=${CMD_RM:-/bin/rm}
 CMD_SED=${CMD_SED:-/usr/bin/sed}
 ### ----------------------------------------------------------------------------
-## Zend Skeleton Application git repository:
-ZFSA_URI=${ZFSA_URI:-git://github.com/zendframework/ZendSkeletonApplication.git}
+## Skeleton Application URI - the default is ZendSkeletonApplication:
+SA_URI=${SA_URI:-git://github.com/zendframework/ZendSkeletonApplication.git}
 ## This default helps with composer timeouts on slow connections
 COMPOSER_PROCESS_TIMEOUT=${COMPOSER_PROCESS_TIMEOUT:-5000}
 ### ----------------------------------------------------------------------------
@@ -84,7 +84,7 @@ else
     ##
     ## Clone ZendSkeletonApplication into ${project} directory...
     ##
-    if ${CMD_GIT} clone ${ZFSA_URI} ${PROJECT_ABSPATH};
+    if ${CMD_GIT} clone ${SA_URI} ${PROJECT_ABSPATH};
     then
         ##
 	## Remove git data of ZendSkeletonApplication
