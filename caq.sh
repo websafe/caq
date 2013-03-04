@@ -153,6 +153,7 @@ else
     if [ ! -d ${PROJECT_ABSPATH}/vendor/bin ]; then
         ${CMD_MKDIR} ${PROJECT_ABSPATH}/vendor/bin
     fi
+    echo "Starting [Composer] installation..."
     if ${CMD_CURL} -s https://getcomposer.org/installer \
          | ${CMD_PHP} -- \
               -n \
@@ -175,8 +176,10 @@ else
         ##
         ##
         ## ---------------------------------------------------------------------
+		echo "Starting [Composer] self-update..."
         if ${CMD_PHP} ./vendor/bin/composer.phar -n selfupdate;
         then
+        	echo "[Composer] self-update has finished."
             ##
             ##
             ##
@@ -203,11 +206,12 @@ else
                         | ${CMD_CUT} -d' ' -f1
                 );
             do
+            	echo "Starting installation of package ${dep}..."
                 ## Install dependency (composer.json gets updated too):
                 if ${CMD_PHP} vendor/bin/composer.phar \
                     require -n "${dep}";
                 then
-                    echo "Installed ${dep}"
+                	echo "Installation of package ${dep} has finished."
                 else
                     echo "Problem while installing ${dep}"
                     exit 5;
