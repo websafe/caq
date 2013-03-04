@@ -33,9 +33,18 @@ THE SOFTWARE.
 Installation
 --------------------------------------------------------------------------------
 
+### General installation procedure
+
+Only `caq.sh`(https://raw.github.com/websafe/caq/master/caq.sh) is really
+required, download it into a location available via PATH and make it executable.
+That's all.
+
+
+### Install using wget
+
 ~~~~
 wget -nc \
-    https://raw.github.com/websafe/caq/caq.sh \
+    https://raw.github.com/websafe/caq/master/caq.sh \
     -O /usr/bin/caq
 chmod +x /usr/bin/caq
 ~~~~
@@ -47,8 +56,21 @@ chmod +x /usr/bin/caq
 >                                 existing files (overwriting them).
 
 
+### Install using lynx
+
+~~~~
+lynx -dump \
+    https://raw.github.com/websafe/caq/master/caq.sh \
+    > /usr/bin/caq
+chmod +x /usr/bin/caq
+~~~~
+
+
+
 Usage
 --------------------------------------------------------------------------------
+
+### Basic usage
 
 Basic usage is:
 
@@ -57,8 +79,10 @@ caq <vendor>/<project> [<profile>]
 ~~~~
 
 
+### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework] 
+
 This will create a project located in directory `./myzf2app` based 
-on [ZendSkeletonApplication] with [ZendFramework] installed as [Composer] 
+on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
 package in `./vendor/zendframework`:
 
 ~~~~
@@ -66,8 +90,10 @@ caq myvendor/myzf2app zf2-app
 ~~~~
 
 
-This will create a project located in directory `./myzf2app` based 
-on nothing (no skeleton application) with [ZendFramework] installed as 
+### Example 2. An empty project with [ZendFramework] libraries
+
+This will create a project located in directory `./myzf2project` based 
+on nothing (no skeleton application) with [ZendFramework] installed as a
 [Composer] package in `./vendor/zendframework`, in other words, a project
 with the pure framework, no application:
 
@@ -76,6 +102,8 @@ caq myvendor/myzf2project zf2
 ~~~~
 
 
+### Example 3. An empty project with [Symfony] libraries
+
 This will create a project located in directory `./mysymfonyproject` based 
 on nothing (no skeleton application) with [Symfony] installed as [Composer] 
 package in `./vendor/symfony`:
@@ -83,6 +111,18 @@ package in `./vendor/symfony`:
 ~~~~
 caq myvendor/mysymfonyproject symfony
 ~~~~
+
+
+### Example 4. A [WordPress] based project
+
+This will create a project located in directory `./mywordpressproject` based 
+on [WordPress]:
+
+~~~~
+caq myvendor/mywordpressproject wordpress
+~~~~
+
+
 
 Contributing
 --------------------------------------------------------------------------------
@@ -107,7 +147,8 @@ Requirements
 
 TODO
 --------------------------------------------------------------------------------
-
+ + create documentation describing [Profiles]
+ + create terms section in readme
  + classmap_generator after installing deps
  + Create README.md if not exists
  + Create LICENSE.md if LICENSE.md|LICENSE.txt|LICENSE not exist
@@ -126,24 +167,24 @@ How caq works
 
 ### The basic procedure
 
-**TSHIS SECTION IS INCOMPLETE**
+**THIS SECTION IS INCOMPLETE**
 
-    + If there is a [Skeleton Application] URI configured,
-      try to clone this repo into projects root directory.
-      If no skeleton URI was configured, skip to next step.
+ 1.	If there is a [Skeleton Application] URI configured, try to clone this
+	repo into projects root directory.
+	If no skeleton URI was configured, skip to next step.
 
-    + Install [Composer] in vendor/bin of projects root directory.
+ 2.	Install [Composer] in vendor/bin of projects root directory.
 
-    + Selfupdate the previously installed [Composer]
+ 3.	Selfupdate the previously installed [Composer]
 
-    + Install all packages ([Composer] packages) configured for the current
-      Profile. If no packages were defined, skip to next step.
-
+ 4.	Install all packages ([Composer] packages) configured for the current
+	Profile. If no packages were defined, skip to next step.
 
 
 Basically, when You don't define a Skeleton Application URI (SA)
 and don't define any packages (PKG) You'll end up with an empty
 project, containing:
+
 
 ~~~~
  + project-name
