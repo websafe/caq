@@ -12,3 +12,5 @@
 [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
 [Symfony]: http://symfony.com/
 [14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
+[ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication
+[WordPress]: https://github.com/WordPress/WordPress
