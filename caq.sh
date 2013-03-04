@@ -245,6 +245,13 @@ fi
 ### PKG:zf2-app:zendframework/zendframework:2.1.3
 ## -----------------------------------------------------------------------------
 ###
+### ZendFramework 2 project with Skeleton Application with and ZfcUser.
+###
+### PROFILE:zf2-app-zfc-user:stability:stable
+### SA:zf2-app-zfc-user:git://github.com/zendframework/ZendSkeletonApplication.git
+### PKG:zf2-app-zfc-user:zendframework/zendframework:2.1.3
+### PKG:zf2-app-zfc-user:zf-commons/zfc-user:*
+## -----------------------------------------------------------------------------###
 ### ZendFramework 2 project with Skeleton Application and lot of useful deps
 ###
 ### PROFILE:zf2-app-full:stability:stable
