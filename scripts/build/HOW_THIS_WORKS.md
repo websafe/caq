@@ -22,6 +22,7 @@ Basically, when You don't define a Skeleton Application URI (SA)
 and don't define any packages (PKG) You'll end up with an empty
 project, containing:
 
+~~~~
  + project-name
    + vendor
      + bin
@@ -37,3 +38,4 @@ project, containing:
    + composer.json
    + README.md
    + LICENSE.md
+~~~~
