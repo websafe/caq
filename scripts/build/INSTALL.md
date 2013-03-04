@@ -17,7 +17,7 @@ chmod +x /usr/bin/caq
 ~~~~
 
 
-### Install using [wget]
+### Install using [Wget]
 
 ~~~~
 wget -nc \
@@ -33,7 +33,7 @@ chmod +x /usr/bin/caq
 >                                 existing files (overwriting them).
 
 
-### Install using [lynx]
+### Install using [Lynx]
 
 ~~~~
 lynx -dump \

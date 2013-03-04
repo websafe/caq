@@ -49,7 +49,7 @@ chmod +x /usr/bin/caq
 ~~~~
 
 
-### Install using [wget]
+### Install using [Wget]
 
 ~~~~
 wget -nc \
@@ -65,7 +65,7 @@ chmod +x /usr/bin/caq
 >                                 existing files (overwriting them).
 
 
-### Install using [lynx]
+### Install using [Lynx]
 
 ~~~~
 lynx -dump \
@@ -89,45 +89,58 @@ caq <vendor>/<project> [<profile>]
 
 ### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework] 
 
-This will create a project located in directory `./myzf2app` based 
+This will create a project located in directory `./my-example-1` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
 package in `./vendor/zendframework`:
 
 ~~~~
-caq myvendor/myzf2app zf2-app
+caq myvendor/my-example-1 zf2-app
 ~~~~
 
 
 ### Example 2. An empty project with [ZendFramework] libraries
 
-This will create a project located in directory `./myzf2project` based 
+This will create a project located in directory `./my-example-2` based 
 on nothing (no skeleton application) with [ZendFramework] installed as a
 [Composer] package in `./vendor/zendframework`, in other words, a project
 with the pure framework, no application:
 
 ~~~~
-caq myvendor/myzf2project zf2
+caq myvendor/my-example-2 zf2
 ~~~~
 
 
 ### Example 3. An empty project with [Symfony] libraries
 
-This will create a project located in directory `./mysymfonyproject` based 
+This will create a project located in directory `./my-example-3` based 
 on nothing (no skeleton application) with [Symfony] installed as [Composer] 
 package in `./vendor/symfony`:
 
 ~~~~
-caq myvendor/mysymfonyproject symfony
+caq myvendor/my-example-3 symfony
 ~~~~
 
 
 ### Example 4. A [WordPress] based project
 
-This will create a project located in directory `./mywordpressproject` based 
+This will create a project located in directory `./my-example-4` based 
 on [WordPress]:
 
 ~~~~
-caq myvendor/mywordpressproject wordpress
+caq myvendor/my-example-4 wordpress
+~~~~
+
+
+### Example 5. A [ZendSkeletonAplication] based project with [ZendFramework] 
+### libraries and [ZfcUser] module  
+
+This will create a project located in directory `./my-example-5` based 
+on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
+package in `./vendor/zendframework/zendframework` and [ZfcUser] module installed
+as a [Composer] package in `./vendor/zf-commons/zfc-user`:
+
+~~~~
+caq myvendor/my-example-5 zf2-app-zfc-user
 ~~~~
 
 
@@ -218,35 +231,45 @@ Links
 
  + [Bash]: http://www.gnu.org/software/bash/bash.html
  + [Composer]: http://getcomposer.org/
- + [ZendFramework]: http://framework.zend.com/
+ + [ZendFramework]: http://framework.zend.com/ ""
  + [ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication
  + [Git]: http://git-scm.com/
  + [GitHub]: https://github.com/
  + [grep]: http://www.gnu.org/software/grep/
+ + [Wget]: http://www.gnu.org/software/wget/
+ + [Lynx]: http://lynx.isc.org/
  + [PHP]: http://php.net/
- + [sed]: http://www.gnu.org/software/sed/
- + [caq]: http://websafe.github.com/caq/
+ + [GNU sed]: http://www.gnu.org/software/sed/
+ + [caq]: http://websafe.github.com/caq/ "caq - Composed Application Quickstarter"
  + [Report issues]: https://github.com/websafe/caq/issues
  + [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
- + [Symfony]: http://symfony.com/
+ + [Wiki]: https://github.com/websafe/caq/wiki/ "Caq Wiki"
+ + [Symfony]: http://symfony.com/ "The Symfony PHP framework"
  + [14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
- + [ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication
+ + [ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
  + [WordPress]: https://github.com/WordPress/WordPress
+ + [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"
+ + [PHPUnit]: https://github.com/sebastianbergmann/phpunit/ "The PHP Unit Testing framework"
 
 
 [Bash]: http://www.gnu.org/software/bash/bash.html
 [Composer]: http://getcomposer.org/
-[ZendFramework]: http://framework.zend.com/
+[ZendFramework]: http://framework.zend.com/ ""
 [ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication
 [Git]: http://git-scm.com/
 [GitHub]: https://github.com/
 [grep]: http://www.gnu.org/software/grep/
+[Wget]: http://www.gnu.org/software/wget/
+[Lynx]: http://lynx.isc.org/
 [PHP]: http://php.net/
-[sed]: http://www.gnu.org/software/sed/
-[caq]: http://websafe.github.com/caq/
+[GNU sed]: http://www.gnu.org/software/sed/
+[caq]: http://websafe.github.com/caq/ "caq - Composed Application Quickstarter"
 [Report issues]: https://github.com/websafe/caq/issues
 [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
-[Symfony]: http://symfony.com/
+[Wiki]: https://github.com/websafe/caq/wiki/ "Caq Wiki"
+[Symfony]: http://symfony.com/ "The Symfony PHP framework"
 [14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
-[ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication
+[ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
 [WordPress]: https://github.com/WordPress/WordPress
+[phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"
+[PHPUnit]: https://github.com/sebastianbergmann/phpunit/ "The PHP Unit Testing framework"
