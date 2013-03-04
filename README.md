@@ -121,6 +121,58 @@ TODO
  + Windows/Cygwin compatible
 
 
+How caq works
+--------------------------------------------------------------------------------
+
+### The basic procedure
+
+    + If there is a [Skeleton Application] URI configured,
+      try to clone this repo into projects root directory.
+      If no skeleton URI was configured, skip to next step.
+
+    + Install [Composer] in vendor/bin of projects root directory.
+
+    + Selfupdate the previously installed [Composer]
+
+    + Install all packages ([Composer] packages) configured for the current
+      Profile. If no packages were defined, skip to next step.
+
+
+
+Basically, when You don't define a Skeleton Application URI (SA)
+and don't define any packages (PKG) You'll end up with an empty
+project, containing:
+
+ + <project>
+   + vendor
+     + bin
+       + composer.phar
+     .gitignore
+   + .gitignore
+   + composer.json
+   + README.md
+   + LICENSE.md
+
+
+Links
+--------------------------------------------------------------------------------
+
+ + [Bash]: http://www.gnu.org/software/bash/bash.html
+ + [Composer]: http://getcomposer.org/
+ + [ZendFramework]: http://framework.zend.com/
+ + [ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication
+ + [Git]: http://git-scm.com/
+ + [GitHub]: https://github.com/
+ + [grep]: http://www.gnu.org/software/grep/
+ + [PHP]: http://php.net/
+ + [sed]: http://www.gnu.org/software/sed/
+ + [caq]: http://websafe.github.com/caq/
+ + [Report issues]: https://github.com/websafe/caq/issues
+ + [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
+ + [Symfony]: http://symfony.com/
+ + [14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
+
+
 [Bash]: http://www.gnu.org/software/bash/bash.html
 [Composer]: http://getcomposer.org/
 [ZendFramework]: http://framework.zend.com/
