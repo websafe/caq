@@ -37,6 +37,7 @@ CMD_PHP_OPT=${CMD_PHP_OPT:-}
 CMD_REALPATH=${CMD_REALPATH:=/usr/bin/realpath}
 CMD_RM=${CMD_RM:-/bin/rm}
 CMD_SED=${CMD_SED:-/usr/bin/sed}
+CMD_SORT=${CMD_SORT:-/usr/bin/sort}
 ### ----------------------------------------------------------------------------
 ## This default helps with composer timeouts on slow connections
 COMPOSER_PROCESS_TIMEOUT=${COMPOSER_PROCESS_TIMEOUT:-5000}
@@ -44,11 +45,29 @@ COMPOSER_PROCESS_TIMEOUT=${COMPOSER_PROCESS_TIMEOUT:-5000}
 DEFAULT_PROFILE=${DEFAULT_PROFILE:-zf2-app}
 CURRENT_PROFILE=${CURRENT_PROFILE:-$DEFAULT_PROFILE}
 ### ----------------------------------------------------------------------------
+SCRIPT_ABSDIR=$(${CMD_DIRNAME} $(${CMD_REALPATH} ${0}))
+SCRIPT_ABSPATH=$(${CMD_REALPATH} ${0})
+### ----------------------------------------------------------------------------
+function extractContent() {
+    local contentId=${1}
+    ${CMD_GREP} -E "^### ${contentId}:" \
+        ${SCRIPT_ABSPATH} | ${CMD_CUT} -d':' -f3-
+}
+function extractProfiles() {
+    ${CMD_GREP} -E "^### PROFILE:" \
+        ${SCRIPT_ABSPATH} \
+        | ${CMD_CUT} -d':' -f2 \
+        | ${CMD_SORT} -u
+}
+### ----------------------------------------------------------------------------
 ##
 ##
 ##
 if [ -z ${1} ]; then
     echo "Usage: ${0} <vendor>/<project> <profile>"
+    echo ""
+    echo "Available profiles: "
+    extractProfiles | ${CMD_SED} -e "s/^/ + /g"
     exit 1;
 else
     vendor=$(echo ${1} | ${CMD_CUT} -d'/' -f1)
@@ -62,15 +81,8 @@ else
     fi
 fi
 ### ----------------------------------------------------------------------------
-SCRIPT_ABSDIR=$(${CMD_DIRNAME} $(${CMD_REALPATH} ${0}))
-SCRIPT_ABSPATH=$(${CMD_REALPATH} ${0})
 PROJECT_ABSPATH=$(${CMD_REALPATH} ${project})
 ### ----------------------------------------------------------------------------
-function extractContent() {
-    local contentId=${1}
-    ${CMD_GREP} -E "^### ${contentId}:" \
-        ${SCRIPT_ABSPATH} | ${CMD_CUT} -d':' -f3-
-}
 function getCurrentProfileVariable() {
     local variableName=${1}
     local profileName=${CURRENT_PROFILE}
@@ -208,6 +220,10 @@ else
                     exit 5;
                 fi
             done
+            ##
+            ##
+            ##
+            ${CMD_PHP} vendor/bin/composer.phar dumpautoload
         else
             echo "Problem while self-updating [Composer]."
             exit 4;
