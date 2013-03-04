@@ -32,7 +32,7 @@ project, containing:
        + autoload_namespaces.php
        + autoload_real.php
      + autoload.php
-     .gitignore
+     + .gitignore
    + .gitignore
    + composer.json
    + README.md
