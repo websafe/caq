@@ -26,6 +26,12 @@ project, containing:
    + vendor
      + bin
        + composer.phar
+     + composer
+       + ClassLoader.php
+       + autoload_classmap.php
+       + autoload_namespaces.php
+       + autoload_real.php
+     + autoload.php
      .gitignore
    + .gitignore
    + composer.json
