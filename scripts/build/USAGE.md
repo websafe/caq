@@ -54,8 +54,7 @@ caq myvendor/my-example-4 wordpress
 ~~~~
 
 
-### Example 5. A [ZendSkeletonAplication] based project with [ZendFramework] 
-### libraries and [ZfcUser] module  
+### Example 5. A [ZendSkeletonAplication] based project with [ZendFramework] libraries and [ZfcUser] module  
 
 This will create a project located in directory `./my-example-5` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
