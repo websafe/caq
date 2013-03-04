@@ -285,6 +285,12 @@ fi
 ### PKG:symfony:symfony/framework-standard-edition:2.1.x-dev
 ## -----------------------------------------------------------------------------
 ###
+### WordPress in project root.
+###
+### PROFILE:wordpress:stability:stable
+### SA:wordpress:git://github.com/WordPress/WordPress.git
+## -----------------------------------------------------------------------------
+###
 ### Default template for composer.json.
 ###
 ### CJ:default:{
