@@ -19,8 +19,12 @@ echo "" >> ../../README.md
 echo "Links" >> ../../README.md
 echo "--------------------------------------------------------------------------------" >> ../../README.md
 echo "" >> ../../README.md
-for link in $(grep -E "^\[" LINKS.md); do
-    echo " + ${link}" >> ../../README.md
+for linkrow in $(grep -E "^\[" LINKS.md | sort); do
+    linktitle=$(echo $linkrow | cut -d'[' -f2 | cut -d']' -f1)
+    linkuri=$(echo $linkrow | cut -d' ' -f2- | cut -d' ' -f1)
+    linkdescr=$(echo $linkrow | cut -d' ' -f2- | cut -d' ' -f2- | tr -d '"')
+    #echo " + ${link}" >> ../../README.md
+    echo " + [${linktitle}] - ${linkdescr}" >> ../../README.md
 done
 echo "" >> ../../README.md
 echo "" >> ../../README.md

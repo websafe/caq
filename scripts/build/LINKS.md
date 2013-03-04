@@ -14,7 +14,7 @@
 [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
 [Wiki]: https://github.com/websafe/caq/wiki/ "Caq Wiki"
 [Symfony]: http://symfony.com/ "The Symfony PHP framework"
-[14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
+[14 Ways to Contribute to Open Source without Being a Programming Genius]: http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
 [ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
 [WordPress]: https://github.com/WordPress/WordPress
 [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"

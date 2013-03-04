@@ -163,7 +163,7 @@ Requirements
  + [Git]
  + [grep]
  + [PHP]
- + [sed]
+ + [GNU sed]
 
 
 TODO
@@ -229,28 +229,28 @@ project, containing:
 Links
 --------------------------------------------------------------------------------
 
- + [Bash]: http://www.gnu.org/software/bash/bash.html
- + [Composer]: http://getcomposer.org/
- + [ZendFramework]: http://framework.zend.com/ "Framework for modern high-performing PHP applications"
- + [ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication
- + [Git]: http://git-scm.com/
- + [GitHub]: https://github.com/
- + [grep]: http://www.gnu.org/software/grep/
- + [Wget]: http://www.gnu.org/software/wget/
- + [Lynx]: http://lynx.isc.org/
- + [PHP]: http://php.net/
- + [GNU sed]: http://www.gnu.org/software/sed/
- + [caq]: http://websafe.github.com/caq/ "caq - Composed Application Quickstarter"
- + [Report issues]: https://github.com/websafe/caq/issues
- + [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
- + [Wiki]: https://github.com/websafe/caq/wiki/ "Caq Wiki"
- + [Symfony]: http://symfony.com/ "The Symfony PHP framework"
- + [14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
- + [ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
- + [WordPress]: https://github.com/WordPress/WordPress
- + [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"
- + [PHPUnit]: https://github.com/sebastianbergmann/phpunit/ "The PHP Unit Testing framework"
- + [ZfcUser]: https://github.com/ZF-Commons/ZfcUser "A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2."
+ + [14 Ways to Contribute to Open Source without Being a Programming Genius] - to Contribute to Open Source without Being a Programming Genius]: http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
+ + [Bash] - http://www.gnu.org/software/bash/bash.html
+ + [Composer] - http://getcomposer.org/
+ + [GNU sed] - http://www.gnu.org/software/sed/
+ + [GitHub] - https://github.com/
+ + [Git] - http://git-scm.com/
+ + [Lynx] - http://lynx.isc.org/
+ + [PHPUnit] - The PHP Unit Testing framework
+ + [PHP] - http://php.net/
+ + [Report issues] - https://github.com/websafe/caq/issues
+ + [Request features] - https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
+ + [Symfony] - The Symfony PHP framework
+ + [Wget] - http://www.gnu.org/software/wget/
+ + [Wiki] - Caq Wiki
+ + [WordPress] - https://github.com/WordPress/WordPress
+ + [ZendFramework] - Framework for modern high-performing PHP applications
+ + [ZendSkeletonAplication] - Sample application skeleton using the ZF2 MVC layer
+ + [ZendSkeletonApplication] - https://github.com/zendframework/ZendSkeletonApplication
+ + [ZfcUser] - A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.
+ + [caq] - caq - Composed Application Quickstarter
+ + [grep] - http://www.gnu.org/software/grep/
+ + [phpDocumentor] - Documentation Generator for PHP
 
 
 [Bash]: http://www.gnu.org/software/bash/bash.html
@@ -269,7 +269,7 @@ Links
 [Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
 [Wiki]: https://github.com/websafe/caq/wiki/ "Caq Wiki"
 [Symfony]: http://symfony.com/ "The Symfony PHP framework"
-[14 Ways to Contribute to Open Source without Being a Programming Genius]:http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
+[14 Ways to Contribute to Open Source without Being a Programming Genius]: http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
 [ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
 [WordPress]: https://github.com/WordPress/WordPress
 [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"

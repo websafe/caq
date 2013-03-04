@@ -6,5 +6,5 @@ Requirements
  + [Git]
  + [grep]
  + [PHP]
- + [sed]
+ + [GNU sed]
 
