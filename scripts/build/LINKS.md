@@ -1,6 +1,6 @@
 [Bash]: http://www.gnu.org/software/bash/bash.html
 [Composer]: http://getcomposer.org/
-[ZendFramework]: http://framework.zend.com/ ""
+[ZendFramework]: http://framework.zend.com/ "Framework for modern high-performing PHP applications"
 [ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication
 [Git]: http://git-scm.com/
 [GitHub]: https://github.com/
@@ -19,3 +19,4 @@
 [WordPress]: https://github.com/WordPress/WordPress
 [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"
 [PHPUnit]: https://github.com/sebastianbergmann/phpunit/ "The PHP Unit Testing framework"
+[ZfcUser]: https://github.com/ZF-Commons/ZfcUser "A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2."
