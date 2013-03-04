@@ -1,16 +1,7 @@
 #!/bin/bash
-# caq - Composed Application Quickstarter
-# =======================================
-# 
-# A simple [Bash] script for automated preparation of [Composer] based
-# applications (i.e. [ZendFramework] apps).
-# 
-# 
-# License
-# -------
-# 
+# caq - Composed Application Quickstarter (https://github.com/websafe/caq/)
 # Copyright (c) 2013 Thomas Szteliga <ts@websafe.pl>, http://websafe.pl/
-# 
+#
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
 # in the Software without restriction, including without limitation the rights
@@ -28,8 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-# 
-# 
+#
 ## -----------------------------------------------------------------------------
 set -e
 ## -----------------------------------------------------------------------------
@@ -54,7 +44,7 @@ DEFAULT_PROFILE=${DEFAULT_PROFILE:-zf2-app}
 CURRENT_PROFILE=${CURRENT_PROFILE:-$DEFAULT_PROFILE}
 ### ----------------------------------------------------------------------------
 ##
-##    
+##
 ##
 if [ -z ${1} ]; then
     echo "Usage: ${0} <vendor>/<project> <profile>"
@@ -131,7 +121,7 @@ else
             ##
             ${CMD_RM} -rf ${PROJECT_ABSPATH}/.gitmodules
             ##
-            ## Remove vendor/ZF2 firectory created if SA was ZendSkeletonApp...
+            ## Remove vendor/ZF2 directory created if SA was ZendSkeletonApp...
             ##
             ${CMD_RM} -rf ${PROJECT_ABSPATH}/vendor/ZF2
         else
@@ -227,69 +217,6 @@ else
         exit 4;
     fi
 fi
-### ----------------------------------------------------------------------------
-###
-### caq
-###
-### PROFILE:caq:stability:stable
-### SA:caq:git://github.com/websafe/caq.git
-## -----------------------------------------------------------------------------
-###
-### Pure ZendFramework 2 project without Skeleton, only framework in vendors/.
-###
-### PROFILE:zf2:stability:stable
-### SA:zf2:
-### PKG:zf2:zendframework/zendframework:2.1.3
-## -----------------------------------------------------------------------------
-###
-### ZendFramework 2 project with Skeleton Application.
-###
-### PROFILE:zf2-app:stability:stable
-### SA:zf2-app:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app:zendframework/zendframework:2.1.3
-## -----------------------------------------------------------------------------
-###
-### ZendFramework 2 project with Skeleton Application with and ZfcUser.
-###
-### PROFILE:zf2-app-zfc-user:stability:stable
-### SA:zf2-app-zfc-user:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-zfc-user:zendframework/zendframework:2.1.3
-### PKG:zf2-app-zfc-user:zf-commons/zfc-user:*
-## -----------------------------------------------------------------------------###
-### ZendFramework 2 project with Skeleton Application and lot of useful deps
-###
-### PROFILE:zf2-app-full:stability:stable
-### SA:zf2-app-full:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-full:zendframework/zendframework:2.1.3
-### PKG:zf2-app-full:zendframework/zend-developer-tools:*
-### PKG:zf2-app-full:zf-commons/zfc-user:*
-### PKG:zf2-app-full:zendframework/zendpdf:*
-### PKG:zf2-app-full:fabpot/PHP-CS-Fixer:*
-### PKG:zf2-app-full:squizlabs/PHP_CodeSniffer:*
-### PKG:zf2-app-full:phpunit/PHPUnit:3.7.*
-### PKG:zf2-app-full:phpunit/php-invoker:*
-### PKG:zf2-app-full:doctrine/common:*
-### PKG:zf2-app-full:doctrine/doctrine-orm-module:*
-### PKG:zf2-app-full:doctrine/phpcr-odm:*
-### PKG:zf2-app-full:doctrine/data-fixtures:*
-### PKG:zf2-app-full:doctrine/migrations:*
-### PKG:zf2-app-full:symfony/yaml:*
-### PKG:zf2-app-full:bjyoungblood/bjy-profiler:*
-### PKG:zf2-app-full:phpdocumentor/phpdocumentor:*
-## -----------------------------------------------------------------------------
-###
-### Symfony Framework project.
-###
-### PROFILE:symfony:stability:stable
-### SA:symfony:
-### PKG:symfony:symfony/framework-standard-edition:2.1.x-dev
-## -----------------------------------------------------------------------------
-###
-### WordPress in project root.
-###
-### PROFILE:wordpress:stability:stable
-### SA:wordpress:git://github.com/WordPress/WordPress.git
-## -----------------------------------------------------------------------------
 ###
 ### Default template for composer.json.
 ###
@@ -307,4 +234,3 @@ fi
 ### CJ:default:    "minimum-stability": "dev"
 ### CJ:default:}
 ## -----------------------------------------------------------------------------
-## EOF
