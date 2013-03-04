@@ -1,5 +1,6 @@
 #!/bin/bash
 # caq - Composed Application Quickstarter (https://github.com/websafe/caq/)
+#
 # Copyright (c) 2013 Thomas Szteliga <ts@websafe.pl>, http://websafe.pl/
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy

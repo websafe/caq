@@ -21,9 +21,9 @@ echo "" >> ../../README.md
 
 cat HOW_THIS_WORKS.md >> ../../README.md
 echo "" >> ../../README.md
-echo "" >> ../../README.md
 
 echo "" >> ../../README.md
+cat LICENSE.md >> ../../README.md
 grep -E "(^# |^#$)" ../../caq.sh | cut -d'#' -f2- | cut -d' ' -f2- >> ../../README.md
 echo "" >> ../../README.md
 
