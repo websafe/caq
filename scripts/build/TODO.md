@@ -1,6 +1,7 @@
 TODO
 --------------------------------------------------------------------------------
-
+ + create documentation describing [Profiles]
+ + create terms section in readme
  + classmap_generator after installing deps
  + Create README.md if not exists
  + Create LICENSE.md if LICENSE.md|LICENSE.txt|LICENSE not exist

@@ -12,7 +12,7 @@ That's all.
 
 ~~~~
 wget -nc \
-    https://raw.github.com/websafe/caq/caq.sh \
+    https://raw.github.com/websafe/caq/master/caq.sh \
     -O /usr/bin/caq
 chmod +x /usr/bin/caq
 ~~~~
