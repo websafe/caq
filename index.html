@@ -72,18 +72,42 @@ chmod +x /usr/bin/caq
 
 <h2>Usage</h2>
 
-<pre><code>caq myvendor/myapplication
+<p>Basic usage is:</p>
+
+<pre><code>caq &lt;vendor&gt;/&lt;project&gt; [&lt;profile&gt;]
 </code></pre>
 
-<p>will create a folder <code>myapplication</code> in the current directory and initiate
-a default set of dependencies (currently hardoced, will change soon).</p>
+<p>This will create a project located in directory <code>./myzf2app</code> based 
+on <a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/">ZendFramework</a> installed as <a href="http://getcomposer.org/">Composer</a> 
+package in <code>./vendor/zendframework</code>:</p>
+
+<pre><code>caq myvendor/myzf2app zf2-app
+</code></pre>
+
+<p>This will create a project located in directory <code>./myzf2app</code> based 
+on nothing (no skeleton application) with <a href="http://framework.zend.com/">ZendFramework</a> installed as 
+<a href="http://getcomposer.org/">Composer</a> package in <code>./vendor/zendframework</code>, in other words, a project
+with the pure framework, no application:</p>
+
+<pre><code>caq myvendor/myzf2project zf2
+</code></pre>
+
+<p>This will create a project located in directory <code>./mysymfonyproject</code> based 
+on nothing (no skeleton application) with <a href="http://symfony.com/">Symfony</a> installed as <a href="http://getcomposer.org/">Composer</a> 
+package in <code>./vendor/symfony</code>:</p>
+
+<pre><code>caq myvendor/mysymfonyproject symfony
+</code></pre>
 
 <h2>Contributing</h2>
 
 <ul>
-<li>Start using <a href="https://github.com/websafe/caq/">caq</a>!</li>
+<li>Start using <a href="http://websafe.github.com/caq/">caq</a>!</li>
 <li><a href="https://github.com/websafe/caq/issues">Report issues</a></li>
 <li><a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a></li>
+<li>Read
+<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a>
+</li>
 </ul><h2>Requirements</h2>
 
 <ul>
@@ -96,9 +120,101 @@ a default set of dependencies (currently hardoced, will change soon).</p>
 </ul><h2>TODO</h2>
 
 <ul>
+<li>classmap_generator after installing deps</li>
+<li>Create README.md if not exists</li>
+<li>Create LICENSE.md if LICENSE.md|LICENSE.txt|LICENSE not exist</li>
 <li>User configs profiles in ~/.caq/</li>
 <li>User templates for faster creation of projects (stored in ~/.caq/templates)</li>
 <li>Plugins</li>
+<li>Profiles testsuite</li>
+<li>travis</li>
+<li>testprofiles - with/without skeleton, with/without packages, emtpy, etc.</li>
+<li>initiate local git repository for generated project</li>
+<li>Windows/Cygwin compatible</li>
+</ul><h2>How caq works</h2>
+
+<h3>The basic procedure</h3>
+
+<p><strong>TSHIS SECTION IS INCOMPLETE</strong></p>
+
+<pre><code>+ If there is a [Skeleton Application] URI configured,
+  try to clone this repo into projects root directory.
+  If no skeleton URI was configured, skip to next step.
+
++ Install [Composer] in vendor/bin of projects root directory.
+
++ Selfupdate the previously installed [Composer]
+
++ Install all packages ([Composer] packages) configured for the current
+  Profile. If no packages were defined, skip to next step.
+</code></pre>
+
+<p>Basically, when You don't define a Skeleton Application URI (SA)
+and don't define any packages (PKG) You'll end up with an empty
+project, containing:</p>
+
+<pre><code> + project-name
+   + vendor
+     + bin
+       + composer.phar
+     + composer
+       + ClassLoader.php
+       + autoload_classmap.php
+       + autoload_namespaces.php
+       + autoload_real.php
+     + autoload.php
+     + .gitignore
+   + .gitignore
+   + composer.json
+   + README.md
+   + LICENSE.md
+</code></pre>
+
+<h2>Links</h2>
+
+<ul>
+<li>
+<a href="http://www.gnu.org/software/bash/bash.html">Bash</a>: <a href="http://www.gnu.org/software/bash/bash.html">http://www.gnu.org/software/bash/bash.html</a>
+</li>
+<li>
+<a href="http://getcomposer.org/">Composer</a>: <a href="http://getcomposer.org/">http://getcomposer.org/</a>
+</li>
+<li>
+<a href="http://framework.zend.com/">ZendFramework</a>: <a href="http://framework.zend.com/">http://framework.zend.com/</a>
+</li>
+<li>
+<a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a>: <a href="https://github.com/zendframework/ZendSkeletonApplication">https://github.com/zendframework/ZendSkeletonApplication</a>
+</li>
+<li>
+<a href="http://git-scm.com/">Git</a>: <a href="http://git-scm.com/">http://git-scm.com/</a>
+</li>
+<li>
+<a href="https://github.com/">GitHub</a>: <a href="https://github.com/">https://github.com/</a>
+</li>
+<li>
+<a href="http://www.gnu.org/software/grep/">grep</a>: <a href="http://www.gnu.org/software/grep/">http://www.gnu.org/software/grep/</a>
+</li>
+<li>
+<a href="http://php.net/">PHP</a>: <a href="http://php.net/">http://php.net/</a>
+</li>
+<li>
+<a href="http://www.gnu.org/software/sed/">sed</a>: <a href="http://www.gnu.org/software/sed/">http://www.gnu.org/software/sed/</a>
+</li>
+<li>
+<a href="http://websafe.github.com/caq/">caq</a>: <a href="http://websafe.github.com/caq/">http://websafe.github.com/caq/</a>
+</li>
+<li>
+<a href="https://github.com/websafe/caq/issues">Report issues</a>: <a href="https://github.com/websafe/caq/issues">https://github.com/websafe/caq/issues</a>
+</li>
+<li>
+<a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a>: <a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open</a>
+</li>
+<li>
+<a href="http://symfony.com/">Symfony</a>: <a href="http://symfony.com/">http://symfony.com/</a>
+</li>
+<li>
+<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a>:<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star</a>
+</li>
 </ul>
       </section>
       <footer>
