@@ -1,33 +1,8 @@
 caq - Composed Application Quickstarter
-=======================================
+================================================================================
 
 A simple [Bash] script for automated preparation of [Composer] based
 applications (i.e. [ZendFramework] apps).
-
-
-License
--------
-
-Copyright (c) 2013 Thomas Szteliga <ts@websafe.pl>, http://websafe.pl/
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
 
 
 Installation
@@ -83,7 +58,7 @@ Usage
 Basic usage is:
 
 ~~~~
-caq <vendor>/<project> [<profile>]
+caq <vendor>/<project> <profile>
 ~~~~
 
 
@@ -225,30 +200,54 @@ project, containing:
 ~~~~
 
 
+
+caq - Composed Application Quickstarter (https://github.com/websafe/caq/)
+Copyright (c) 2013 Thomas Szteliga <ts@websafe.pl>, http://websafe.pl/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+
 Links
 --------------------------------------------------------------------------------
 
- + [14 Ways to Contribute to Open Source without Being a Programming Genius] - to Contribute to Open Source without Being a Programming Genius]: http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
- + [Bash] - http://www.gnu.org/software/bash/bash.html
- + [Composer] - http://getcomposer.org/
- + [GNU sed] - http://www.gnu.org/software/sed/
- + [GitHub] - https://github.com/
- + [Git] - http://git-scm.com/
- + [Lynx] - http://lynx.isc.org/
+ + [14 Ways to Contribute to Open Source without Being a Programming Genius] - 
+ + [Bash] - 
+ + [Composer] - 
+ + [GNU sed] - 
+ + [GitHub] - 
+ + [Git] - 
+ + [Lynx] - 
  + [PHPUnit] - The PHP Unit Testing framework
- + [PHP] - http://php.net/
- + [Report issues] - https://github.com/websafe/caq/issues
- + [Request features] - https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
+ + [PHP] - 
+ + [Report issues] - 
+ + [Request features] - 
  + [Symfony] - The Symfony PHP framework
- + [Wget] - http://www.gnu.org/software/wget/
+ + [Wget] - 
  + [Wiki] - Caq Wiki
- + [WordPress] - https://github.com/WordPress/WordPress
+ + [WordPress] - 
  + [ZendFramework] - Framework for modern high-performing PHP applications
  + [ZendSkeletonAplication] - Sample application skeleton using the ZF2 MVC layer
- + [ZendSkeletonApplication] - https://github.com/zendframework/ZendSkeletonApplication
+ + [ZendSkeletonApplication] - 
  + [ZfcUser] - A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.
  + [caq] - caq - Composed Application Quickstarter
- + [grep] - http://www.gnu.org/software/grep/
+ + [grep] - 
  + [phpDocumentor] - Documentation Generator for PHP
 
 

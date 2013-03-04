@@ -6,7 +6,7 @@ Usage
 Basic usage is:
 
 ~~~~
-caq <vendor>/<project> [<profile>]
+caq <vendor>/<project> <profile>
 ~~~~
 
 
