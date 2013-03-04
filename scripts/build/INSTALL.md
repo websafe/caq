@@ -8,7 +8,16 @@ required, download it into a location available via PATH and make it executable.
 That's all.
 
 
-### Install using wget
+### Install using [PHP]
+
+~~~~
+php -r \
+    "copy('https://raw.github.com/websafe/caq/master/caq.sh', '/usr/bin/caq');"
+chmod +x /usr/bin/caq
+~~~~
+
+
+### Install using [wget]
 
 ~~~~
 wget -nc \
@@ -24,7 +33,7 @@ chmod +x /usr/bin/caq
 >                                 existing files (overwriting them).
 
 
-### Install using lynx
+### Install using [lynx]
 
 ~~~~
 lynx -dump \
@@ -32,5 +41,4 @@ lynx -dump \
     > /usr/bin/caq
 chmod +x /usr/bin/caq
 ~~~~
-
 
