@@ -2,27 +2,39 @@
     "name": "websafe/caq",
     "description": "Composed Application Quickstarter",
     "license": "MIT",
+    "type": "library",
     "keywords": [
         "bash",
         "php",
         "quickstart",
-        "project",
         "development",
-        "composer"
+        "composer", 
+        "ZendFramework",
+        "Symfony",
+        "PHPUnit",
+        "webdeveloper",
+        "script",
+        "project",
+        "automation"
     ],
     "homepage": "http://websafe.github.com/caq/",
-    {
-        "authors": [
-            {
-                "name": "Thomas Szteliga",
-                "email": "ts@websafe.pl",
-                "homepage": "https://websafe.pl/",
-                "role": "Developer"
-            }
-        ]
+    "authors": [
+        {
+            "name": "Thomas Szteliga",
+            "email": "ts@websafe.pl",
+            "homepage": "https://websafe.pl/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "caq-support@websafe.pl",
+        "issues": "https://github.com/websafe/caq/issues/",
+        "forum": "https://github.com/websafe/caq/issues?labels=question",
+        "wiki": "https://github.com/websafe/caq/wiki/",
+        "source": "https://github.com/websafe/caq/"
     },
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.3.3"
     },
     "bin": [
         "caq.sh"
