@@ -161,6 +161,9 @@ else
     elif [ -r ${PROJECT_ABSPATH}/LICENSE ]; then
         ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE \
         ${PROJECT_ABSPATH}/LICENSE.md
+    elif [ -r ${PROJECT_ABSPATH}/license.txt ]; then
+        ${CMD_MV} ${PROJECT_ABSPATH}/license.txt \
+        ${PROJECT_ABSPATH}/LICENSE.md
     fi
     fi
     if [ ! -r ${PROJECT_ABSPATH}/LICENSE.md ]; then
@@ -260,21 +263,24 @@ else
         ##
         ##
         ## ---------------------------------------------------------------------
-        echo "Starting [Composer] self-update..."
+    echo "Starting [Composer] self-update..."
         if ${CMD_PHP} ./vendor/bin/composer.phar -n selfupdate;
         then
             echo "[Composer] self-update has finished."
             ##
             ##
             ##
+            if [ ! -r composer.json ]; then
+            echo "No initial 'composer.json' found - creating from template."
             extractContent "CJ:default" \
-                | ${CMD_SED} \
+                    | ${CMD_SED} \
                     -e "s/PROJECT_VENDOR/${vendor}/g" \
                     -e "s/PROJECT_NAME/${project}/g" \
                     -e "s#PROJECT_HOMEPAGE#${homepage}#g" \
                     -e "s/PROJECT_KEYWORDS/${keywords}/g" \
                     -e "s/PROJECT_LICENSE/${license}/g" \
-                > composer.json
+                    > composer.json
+            fi
             ##
             ## GIT
             ##
@@ -372,11 +378,20 @@ fi
 ###
 ###
 ###
+### Symfony Standard Edition - a fully-functional Symfony2
+### application that you can use as the skeleton for your new
+### applications.
+###
+### PROFILE:symfony-standard
+### SA:symfony-standard:git://github.com/symfony/symfony-standard.git
+###
+###
+###
 ### An empty project with [Symfony Framework] libraries.
 ###
 ### PROFILE:symfony
 ### SA:symfony:
-### PKG:symfony:symfony/framework-standard-edition:2.1.x-dev
+### PKG:symfony:symfony/symfony:*
 ###
 ###
 ###
