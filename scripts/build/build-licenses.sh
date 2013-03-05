@@ -6,8 +6,6 @@ IFS="
 for licenseSource in ../../source/templates/licenses/*.md; do
     licenseName=$(basename $licenseSource .md)
     licenseContent="$(cat ${licenseSource})"
-    echo $licenseName
-    echo $licenseSource
     echo "$licenseContent"  | sed \
 	-e "s/^/### LT:${licenseName}:/g"
     #echo "$profileContent";
