@@ -329,6 +329,7 @@ else
 	    ##
 	    ${CMD_GIT} branch develop;
 	    ${CMD_GIT} checkout develop;
+	    ${CMD_GIT} branch;
         else
             echo "Problem while self-updating [Composer]."
             exit 4;
