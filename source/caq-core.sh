@@ -245,9 +245,9 @@ fi
 ### CJ:default:        PROJECT_KEYWORDS
 ### CJ:default:    ],
 ### CJ:default:    "homepage": "PROJECT_HOMEPAGE",
+### CJ:default:    "minimum-stability": "dev",
 ### CJ:default:    "require": {
 ### CJ:default:        "php": ">=5.3.3"
-### CJ:default:    },
-### CJ:default:    "minimum-stability": "dev"
+### CJ:default:    }
 ### CJ:default:}
 ## -----------------------------------------------------------------------------
