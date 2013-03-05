@@ -151,6 +151,79 @@ else
         fi
     fi
     echo "Cloning Skeleton Application finished."
+    ##
+    ## Tricky licenses
+    ##
+    if [ ! -r ${PROJECT_ABSPATH}/LICENSE.md ]; then
+        if [ -r ${PROJECT_ABSPATH}/LICENSE.txt ]; then
+            ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE.txt \
+        ${PROJECT_ABSPATH}/LICENSE.md
+    elif [ -r ${PROJECT_ABSPATH}/LICENSE ]; then
+        ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE \
+        ${PROJECT_ABSPATH}/LICENSE.md
+    fi
+    fi
+    if [ ! -r ${PROJECT_ABSPATH}/LICENSE.md ]; then
+    ##
+    ## Put default license
+    ##
+    extractContent "LT:MIT" > ${PROJECT_ABSPATH}/LICENSE.md
+    fi
+    ##
+    ## GIT
+    ##
+    (
+    cd ${PROJECT_ABSPATH};
+    ${CMD_GIT} add LICENSE.md;
+        ${CMD_GIT} commit LICENSE.md \
+        -m "[caq] Added initial 'LICENSE.md'.";
+    )
+    ##
+    ## Tricky readme
+    ##
+    if [ ! -r ${PROJECT_ABSPATH}/README.md ]; then
+        if [ -r ${PROJECT_ABSPATH}/REAMDE.txt ]; then
+            ${CMD_MV} ${PROJECT_ABSPATH}/README.txt \
+        ${PROJECT_ABSPATH}/README.md
+    elif [ -r ${PROJECT_ABSPATH}/README ]; then
+        ${CMD_MV} ${PROJECT_ABSPATH}/README \
+        ${PROJECT_ABSPATH}/README.md
+    fi
+    fi
+    if [ ! -r ${PROJECT_ABSPATH}/README.md ]; then
+    ##
+    ## Put default README
+    ##
+    echo ${project} > ${PROJECT_ABSPATH}/README.md
+    echo -n "========================================" \
+        >> ${PROJECT_ABSPATH}/README.md
+    echo "========================================" \
+        >> ${PROJECT_ABSPATH}/README.md
+    fi
+    ##
+    ## GIT
+    ##
+    (
+    cd ${PROJECT_ABSPATH};
+    ${CMD_GIT} add README.md;
+    ${CMD_GIT} commit README.md \
+        -m "[caq] Added initial 'README.md'.";
+    )
+    ##
+    ## Default gitignore
+    ##
+    if [ ! -r ${PROJECT_ABSPATH}/.gitignore ]; then
+    extractContent "FT:default.gitignore" > ${PROJECT_ABSPATH}/.gitignore
+    fi
+    ##
+    ## GIT
+    ##
+    (
+    cd ${PROJECT_ABSPATH};
+    ${CMD_GIT} add .gitignore;
+    ${CMD_GIT} commit .gitignore \
+        -m "[caq] Added initial '.gitignore'.";
+    )
     ## -------------------------------------------------------------------------
     ##
     ##
@@ -309,6 +382,15 @@ fi
 ###
 ###
 ###
+### Empty project with Twitter Bootstap and ZendFramework libraries in `./vendor/`.
+###
+### PROFILE:wbf-empty-tb-zf2
+### SA:wbf-empty-tb-zf2:
+### PKG:wbf-empty-tb-zf2:zendframework/zendframework:2.1.3
+### PKG:wbf-empty-tb-zf2:twitter/bootstrap:*
+###
+###
+###
 ### A [WordPress] based project.
 ###
 ### PROFILE:wordpress
@@ -383,6 +465,18 @@ fi
 ### LT:MIT:LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 ### LT:MIT:OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 ### LT:MIT:THE SOFTWARE.
+###
+###
+### FT:default.gitignore:nbproject
+### FT:default.gitignore:._*
+### FT:default.gitignore:.~lock.*
+### FT:default.gitignore:.buildpath
+### FT:default.gitignore:.DS_Store
+### FT:default.gitignore:.idea
+### FT:default.gitignore:.project
+### FT:default.gitignore:.settings
+### FT:default.gitignore:composer.lock
+### FT:default.gitignore:vendor
 ###
 ###
 ### EOF
