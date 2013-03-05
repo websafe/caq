@@ -161,6 +161,9 @@ else
 	elif [ -r ${PROJECT_ABSPATH}/LICENSE ]; then
 	    ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE \
 		${PROJECT_ABSPATH}/LICENSE.md
+	elif [ -r ${PROJECT_ABSPATH}/license.txt ]; then
+	    ${CMD_MV} ${PROJECT_ABSPATH}/license.txt \
+		${PROJECT_ABSPATH}/LICENSE.md
 	fi
     fi
     if [ ! -r ${PROJECT_ABSPATH}/LICENSE.md ]; then
