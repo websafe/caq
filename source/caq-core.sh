@@ -324,6 +324,11 @@ else
             ##
             ##
             ${CMD_PHP} vendor/bin/composer.phar dumpautoload
+	    ##
+	    ## GIT
+	    ##
+	    ${CMD_GIT} branch develop;
+	    ${CMD_GIT} checkout develop;
         else
             echo "Problem while self-updating [Composer]."
             exit 4;
