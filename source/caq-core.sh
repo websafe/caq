@@ -154,32 +154,29 @@ else
     ##
     ## Tricky licenses
     ##
-    if [ ! -r ${PROJECT_ABSPATH}/LICENSE.md ]; then
+    if [ ! -r ${PROJECT_ABSPATH}/LICENSE ]; then
         if [ -r ${PROJECT_ABSPATH}/LICENSE.txt ]; then
     	    ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE.txt \
-		${PROJECT_ABSPATH}/LICENSE.md
-	elif [ -r ${PROJECT_ABSPATH}/LICENSE ]; then
-	    ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE \
-		${PROJECT_ABSPATH}/LICENSE.md
+		${PROJECT_ABSPATH}/LICENSE
 	elif [ -r ${PROJECT_ABSPATH}/license.txt ]; then
 	    ${CMD_MV} ${PROJECT_ABSPATH}/license.txt \
-		${PROJECT_ABSPATH}/LICENSE.md
+		${PROJECT_ABSPATH}/LICENSE
 	fi
     fi
-    if [ ! -r ${PROJECT_ABSPATH}/LICENSE.md ]; then
+    if [ ! -r ${PROJECT_ABSPATH}/LICENSE ]; then
 	##
 	## Put default license
 	##
-	extractContent "LT:MIT" > ${PROJECT_ABSPATH}/LICENSE.md
+	extractContent "LT:MIT" > ${PROJECT_ABSPATH}/LICENSE
     fi
     ##
     ## GIT
     ##
     (
 	cd ${PROJECT_ABSPATH};
-	${CMD_GIT} add LICENSE.md;
-        ${CMD_GIT} commit LICENSE.md \
-	    -m "[caq] Added initial 'LICENSE.md'.";
+	${CMD_GIT} add LICENSE;
+        ${CMD_GIT} commit LICENSE \
+	    -m "[caq] Added initial 'LICENSE'.";
     )
     ##
     ## Tricky readme
