@@ -263,21 +263,24 @@ else
         ##
         ##
         ## ---------------------------------------------------------------------
-		echo "Starting [Composer] self-update..."
+	echo "Starting [Composer] self-update..."
         if ${CMD_PHP} ./vendor/bin/composer.phar -n selfupdate;
         then
         	echo "[Composer] self-update has finished."
             ##
             ##
             ##
-            extractContent "CJ:default" \
-                | ${CMD_SED} \
-                    -e "s/PROJECT_VENDOR/${vendor}/g" \
-                    -e "s/PROJECT_NAME/${project}/g" \
-                    -e "s#PROJECT_HOMEPAGE#${homepage}#g" \
-                    -e "s/PROJECT_KEYWORDS/${keywords}/g" \
-                    -e "s/PROJECT_LICENSE/${license}/g" \
-                > composer.json
+            if [ ! -r composer.json ]; then
+        	echo "No initial 'composer.json' found - creating from template."
+        	extractContent "CJ:default" \
+            	    | ${CMD_SED} \
+                	-e "s/PROJECT_VENDOR/${vendor}/g" \
+                	-e "s/PROJECT_NAME/${project}/g" \
+                	-e "s#PROJECT_HOMEPAGE#${homepage}#g" \
+                	-e "s/PROJECT_KEYWORDS/${keywords}/g" \
+                	-e "s/PROJECT_LICENSE/${license}/g" \
+            	    > composer.json
+            fi
             ##
             ## GIT
             ##
