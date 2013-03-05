@@ -119,6 +119,10 @@ else
     if [ -z "${SA_URI}" ];
     then
         echo "No skeleton for current profile.";
+        ##
+        ## GIT
+        ##
+        ${CMD_GIT} init ${PROJECT_ABSPATH}
     else
         ##
         ## Clone Skeleton Application into ${project} directory...
@@ -137,6 +141,10 @@ else
             ## Remove vendor/ZF2 directory created if SA was ZendSkeletonApp...
             ##
             ${CMD_RM} -rf ${PROJECT_ABSPATH}/vendor/ZF2
+            ##
+            ##
+            ##
+            ${CMD_GIT} init ${PROJECT_ABSPATH}
         else
             echo "Problem while cloning Skeleton Application."
             exit 5;
@@ -194,7 +202,19 @@ else
                     -e "s/PROJECT_KEYWORDS/${keywords}/g" \
                     -e "s/PROJECT_LICENSE/${license}/g" \
                 > composer.json
+            ##
+            ## GIT
+            ##
+            ${CMD_GIT} add composer.json
+            ${CMD_GIT} commit composer.json -m "[caq] Added initial 'composer.json'."
+            ##
+            ##
+            ##
             ${CMD_PHP} vendor/bin/composer.phar config process-timeout 5000
+            ##
+            ## GIT
+            ##
+            ${CMD_GIT} commit composer.json -m "[caq] Updated [Composer] config."
             #${CMD_PHP} vendor/bin/composer.phar -n update
             ## ----------------------------------------------------------------
             ##
@@ -215,6 +235,10 @@ else
                     require -n "${dep}";
                 then
                     echo "Installation of package ${dep} has finished."
+                    ##
+                    ## GIT
+                    ##
+                    ${CMD_GIT} commit composer.json -m "[caq] Added [Composer] package ${dep}."
                 else
                     echo "Problem while installing ${dep}"
                     exit 5;
@@ -271,6 +295,14 @@ fi
 ### PROFILE:symfony
 ### SA:symfony:
 ### PKG:symfony:symfony/framework-standard-edition:2.1.x-dev
+###
+###
+###
+### An empty project with [Twig] libraries.
+###
+### PROFILE:twig
+### SA:twig:
+### PKG:twig:twig/twig:1.*
 ###
 ###
 ###

@@ -142,6 +142,7 @@ Requirements
 
 TODO
 --------------------------------------------------------------------------------
+ + check if profile exists and notify when using default.
  + create documentation describing [Profiles]
  + create terms section in readme
  + classmap_generator after installing deps
