@@ -206,7 +206,8 @@ else
             ## GIT
             ##
             ${CMD_GIT} add composer.json
-            ${CMD_GIT} commit composer.json -m "[caq] Added initial 'composer.json'."
+            ${CMD_GIT} commit composer.json \
+            -m "[caq] Added initial 'composer.json'."
             ##
             ##
             ##
@@ -214,7 +215,8 @@ else
             ##
             ## GIT
             ##
-            ${CMD_GIT} commit composer.json -m "[caq] Updated [Composer] config."
+            ${CMD_GIT} commit composer.json \
+            -m "[caq] Updated [Composer] config."
             #${CMD_PHP} vendor/bin/composer.phar -n update
             ## ----------------------------------------------------------------
             ##
@@ -238,7 +240,8 @@ else
                     ##
                     ## GIT
                     ##
-                    ${CMD_GIT} commit composer.json -m "[caq] Added [Composer] package ${dep}."
+                    ${CMD_GIT} commit composer.json \
+                        -m "[caq] Added [Composer] package ${dep}."
                 else
                     echo "Problem while installing ${dep}"
                     exit 5;
@@ -359,6 +362,27 @@ fi
 ### PROFILE:zf2
 ### SA:zf2:
 ### PKG:zf2:zendframework/zendframework:2.1.3
+###
+###
+### LT:MIT:Copyright (c) <year> <copyright holders>
+### LT:MIT:
+### LT:MIT:Permission is hereby granted, free of charge, to any person obtaining a copy
+### LT:MIT:of this software and associated documentation files (the "Software"), to deal
+### LT:MIT:in the Software without restriction, including without limitation the rights
+### LT:MIT:to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+### LT:MIT:copies of the Software, and to permit persons to whom the Software is
+### LT:MIT:furnished to do so, subject to the following conditions:
+### LT:MIT:
+### LT:MIT:The above copyright notice and this permission notice shall be included in
+### LT:MIT:all copies or substantial portions of the Software.
+### LT:MIT:
+### LT:MIT:THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+### LT:MIT:IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+### LT:MIT:FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+### LT:MIT:AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+### LT:MIT:LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+### LT:MIT:OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+### LT:MIT:THE SOFTWARE.
 ###
 ###
 ### EOF

@@ -8,6 +8,7 @@ OUTPUTFILE=caq.sh
 
 cat ../../source/caq-core.sh > ./${OUTPUTFILE}.tmp
 ./build-profiles.sh >> ./${OUTPUTFILE}.tmp
+./build-licenses.sh >> ./${OUTPUTFILE}.tmp
 echo -n "### EOF" >> ./${OUTPUTFILE}.tmp
 #chmod +x ./${OUTPUTFILE}.tmp
 cat ./${OUTPUTFILE}.tmp \

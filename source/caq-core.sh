@@ -206,7 +206,8 @@ else
             ## GIT
             ##
             ${CMD_GIT} add composer.json
-            ${CMD_GIT} commit composer.json -m "[caq] Added initial 'composer.json'."
+            ${CMD_GIT} commit composer.json \
+        	-m "[caq] Added initial 'composer.json'."
             ##
             ##
             ##
@@ -214,7 +215,8 @@ else
             ##
             ## GIT
             ##
-            ${CMD_GIT} commit composer.json -m "[caq] Updated [Composer] config."
+            ${CMD_GIT} commit composer.json \
+        	-m "[caq] Updated [Composer] config."
             #${CMD_PHP} vendor/bin/composer.phar -n update
             ## ----------------------------------------------------------------
             ##
@@ -238,7 +240,8 @@ else
                 	##
                 	## GIT
                 	##
-                	${CMD_GIT} commit composer.json -m "[caq] Added [Composer] package ${dep}."
+                	${CMD_GIT} commit composer.json \
+                	    -m "[caq] Added [Composer] package ${dep}."
                 else
                     echo "Problem while installing ${dep}"
                     exit 5;
