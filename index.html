@@ -31,9 +31,178 @@
         <h1>caq - Composed Application Quickstarter</h1>
 
 <p>A simple <a href="http://www.gnu.org/software/bash/bash.html">Bash</a> script for automated preparation of <a href="http://getcomposer.org/">Composer</a> based
-applications (i.e. <a href="http://framework.zend.com/">ZendFramework</a> apps).</p>
+applications (i.e. <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> apps).</p>
+
+<h2>Installation</h2>
+
+<h3>General installation procedure</h3>
+
+<p>Only <code>caq.sh</code>(<a href="https://raw.github.com/websafe/caq/master/caq.sh">https://raw.github.com/websafe/caq/master/caq.sh</a>) is really
+required, download it into a location available via PATH and make it executable.
+That's all.</p>
+
+<h3>Install using <a href="http://php.net/">PHP</a>
+</h3>
+
+<pre><code>php -r \
+    "copy('https://raw.github.com/websafe/caq/master/caq.sh', '/usr/bin/caq');"
+chmod +x /usr/bin/caq
+</code></pre>
+
+<h3>Install using <a href="http://www.gnu.org/software/wget/">Wget</a>
+</h3>
+
+<pre><code>wget -nc \
+    https://raw.github.com/websafe/caq/master/caq.sh \
+    -O /usr/bin/caq
+chmod +x /usr/bin/caq
+</code></pre>
+
+<p><code>-ns</code> stands for <code>--no-clobber</code>:</p>
+
+<blockquote>
+<p>-nc, --no-clobber              skip downloads that would download to
+                                existing files (overwriting them).</p>
+</blockquote>
+
+<h3>Install using <a href="http://lynx.isc.org/">Lynx</a>
+</h3>
+
+<pre><code>lynx -dump \
+    https://raw.github.com/websafe/caq/master/caq.sh \
+    &gt; /usr/bin/caq
+chmod +x /usr/bin/caq
+</code></pre>
+
+<h2>Usage</h2>
+
+<h3>Basic usage</h3>
+
+<p>Basic usage is:</p>
+
+<pre><code>caq &lt;vendor&gt;/&lt;project&gt; &lt;profile&gt;
+</code></pre>
+
+<h3>Example 1. A <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonAplication</a> based project with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a>
+</h3>
+
+<p>This will create a project located in directory <code>./my-example-1</code> based 
+on <a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a <a href="http://getcomposer.org/">Composer</a>
+package in <code>./vendor/zendframework</code>:</p>
+
+<pre><code>caq myvendor/my-example-1 zf2-app
+</code></pre>
+
+<h3>Example 2. An empty project with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> libraries</h3>
+
+<p>This will create a project located in directory <code>./my-example-2</code> based 
+on nothing (no skeleton application) with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a
+<a href="http://getcomposer.org/">Composer</a> package in <code>./vendor/zendframework</code>, in other words, a project
+with the pure framework, no application:</p>
+
+<pre><code>caq myvendor/my-example-2 zf2
+</code></pre>
+
+<h3>Example 3. An empty project with <a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> libraries</h3>
+
+<p>This will create a project located in directory <code>./my-example-3</code> based 
+on nothing (no skeleton application) with <a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> installed as <a href="http://getcomposer.org/">Composer</a> 
+package in <code>./vendor/symfony</code>:</p>
+
+<pre><code>caq myvendor/my-example-3 symfony
+</code></pre>
+
+<h3>Example 4. A <a href="https://github.com/WordPress/WordPress">WordPress</a> based project</h3>
+
+<p>This will create a project located in directory <code>./my-example-4</code> based 
+on <a href="https://github.com/WordPress/WordPress">WordPress</a>:</p>
+
+<pre><code>caq myvendor/my-example-4 wordpress
+</code></pre>
+
+<h3>Example 5. A <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonAplication</a> based project with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> libraries and <a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> module</h3>
+
+<p>This will create a project located in directory <code>./my-example-5</code> based 
+on <a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a <a href="http://getcomposer.org/">Composer</a>
+package in <code>./vendor/zendframework/zendframework</code> and <a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> module installed
+as a <a href="http://getcomposer.org/">Composer</a> package in <code>./vendor/zf-commons/zfc-user</code>:</p>
+
+<pre><code>caq myvendor/my-example-5 zf2-app-zfc-user
+</code></pre>
+
+<h2>Contributing</h2>
+
+<ul>
+<li>Start using <a href="http://websafe.github.com/caq/" title="caq - Composed Application Quickstarter">caq</a>!</li>
+<li><a href="https://github.com/websafe/caq/issues">Report issues</a></li>
+<li><a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a></li>
+<li>Read
+<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a>
+</li>
+</ul><h2>Requirements</h2>
+
+<ul>
+<li><a href="http://www.gnu.org/software/bash/bash.html">Bash</a></li>
+<li><a href="http://getcomposer.org/">Composer</a></li>
+<li><a href="http://git-scm.com/">Git</a></li>
+<li><a href="http://www.gnu.org/software/grep/">grep</a></li>
+<li><a href="http://php.net/">PHP</a></li>
+<li><a href="http://www.gnu.org/software/sed/">GNU sed</a></li>
+</ul><h2>TODO</h2>
+
+<ul>
+<li>check if profile exists and notify when using default.</li>
+<li>create documentation describing [Profiles]</li>
+<li>create terms section in readme</li>
+<li>classmap_generator after installing deps</li>
+<li>Create README.md if not exists</li>
+<li>Create LICENSE.md if LICENSE.md|LICENSE.txt|LICENSE not exist</li>
+<li>User configs profiles in ~/.caq/</li>
+<li>User templates for faster creation of projects (stored in ~/.caq/templates)</li>
+<li>Plugins</li>
+<li>Profiles testsuite</li>
+<li>travis</li>
+<li>testprofiles - with/without skeleton, with/without packages, emtpy, etc.</li>
+<li>initiate local git repository for generated project</li>
+<li>Windows/Cygwin compatible</li>
+</ul><h2>How caq works</h2>
+
+<h3>The basic procedure</h3>
+
+<p><strong>THIS SECTION IS INCOMPLETE</strong></p>
+
+<ol>
+<li><p>If there is a [Skeleton Application] URI configured, try to clone this
+repo into projects root directory.
+If no skeleton URI was configured, skip to next step.</p></li>
+<li><p>Install <a href="http://getcomposer.org/">Composer</a> in vendor/bin of projects root directory.</p></li>
+<li><p>Selfupdate the previously installed <a href="http://getcomposer.org/">Composer</a></p></li>
+<li><p>Install all packages (<a href="http://getcomposer.org/">Composer</a> packages) configured for the current
+Profile. If no packages were defined, skip to next step.</p></li>
+</ol><p>Basically, when You don't define a Skeleton Application URI (SA)
+and don't define any packages (PKG) You'll end up with an empty
+project, containing:</p>
+
+<pre><code> + project-name
+   + vendor
+     + bin
+       + composer.phar
+     + composer
+       + ClassLoader.php
+       + autoload_classmap.php
+       + autoload_namespaces.php
+       + autoload_real.php
+     + autoload.php
+     + .gitignore
+   + .gitignore
+   + composer.json
+   + README.md
+   + LICENSE.md
+</code></pre>
 
 <h2>License</h2>
+
+<p>caq - Composed Application Quickstarter (<a href="https://github.com/websafe/caq/">https://github.com/websafe/caq/</a>)</p>
 
 <p>Copyright (c) 2013 Thomas Szteliga <a href="mailto:ts@websafe.pl">ts@websafe.pl</a>, <a href="http://websafe.pl/">http://websafe.pl/</a></p>
 
@@ -55,166 +224,53 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.</p>
 
-<h2>Installation</h2>
-
-<pre><code>wget -nc \
-    https://raw.github.com/websafe/caq/caq.sh \
-    -O /usr/bin/caq
-chmod +x /usr/bin/caq
-</code></pre>
-
-<p><code>-ns</code> stands for <code>--no-clobber</code>:</p>
-
-<blockquote>
-<p>-nc, --no-clobber              skip downloads that would download to
-                                existing files (overwriting them).</p>
-</blockquote>
-
-<h2>Usage</h2>
-
-<p>Basic usage is:</p>
-
-<pre><code>caq &lt;vendor&gt;/&lt;project&gt; [&lt;profile&gt;]
-</code></pre>
-
-<p>This will create a project located in directory <code>./myzf2app</code> based 
-on <a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/">ZendFramework</a> installed as <a href="http://getcomposer.org/">Composer</a> 
-package in <code>./vendor/zendframework</code>:</p>
-
-<pre><code>caq myvendor/myzf2app zf2-app
-</code></pre>
-
-<p>This will create a project located in directory <code>./myzf2app</code> based 
-on nothing (no skeleton application) with <a href="http://framework.zend.com/">ZendFramework</a> installed as 
-<a href="http://getcomposer.org/">Composer</a> package in <code>./vendor/zendframework</code>, in other words, a project
-with the pure framework, no application:</p>
-
-<pre><code>caq myvendor/myzf2project zf2
-</code></pre>
-
-<p>This will create a project located in directory <code>./mysymfonyproject</code> based 
-on nothing (no skeleton application) with <a href="http://symfony.com/">Symfony</a> installed as <a href="http://getcomposer.org/">Composer</a> 
-package in <code>./vendor/symfony</code>:</p>
-
-<pre><code>caq myvendor/mysymfonyproject symfony
-</code></pre>
-
-<h2>Contributing</h2>
-
-<ul>
-<li>Start using <a href="http://websafe.github.com/caq/">caq</a>!</li>
-<li><a href="https://github.com/websafe/caq/issues">Report issues</a></li>
-<li><a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a></li>
-<li>Read
-<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a>
-</li>
-</ul><h2>Requirements</h2>
-
-<ul>
-<li><a href="http://www.gnu.org/software/bash/bash.html">Bash</a></li>
-<li><a href="http://getcomposer.org/">Composer</a></li>
-<li><a href="http://git-scm.com/">Git</a></li>
-<li><a href="http://www.gnu.org/software/grep/">grep</a></li>
-<li><a href="http://php.net/">PHP</a></li>
-<li><a href="http://www.gnu.org/software/sed/">sed</a></li>
-</ul><h2>TODO</h2>
-
-<ul>
-<li>classmap_generator after installing deps</li>
-<li>Create README.md if not exists</li>
-<li>Create LICENSE.md if LICENSE.md|LICENSE.txt|LICENSE not exist</li>
-<li>User configs profiles in ~/.caq/</li>
-<li>User templates for faster creation of projects (stored in ~/.caq/templates)</li>
-<li>Plugins</li>
-<li>Profiles testsuite</li>
-<li>travis</li>
-<li>testprofiles - with/without skeleton, with/without packages, emtpy, etc.</li>
-<li>initiate local git repository for generated project</li>
-<li>Windows/Cygwin compatible</li>
-</ul><h2>How caq works</h2>
-
-<h3>The basic procedure</h3>
-
-<p><strong>TSHIS SECTION IS INCOMPLETE</strong></p>
-
-<pre><code>+ If there is a [Skeleton Application] URI configured,
-  try to clone this repo into projects root directory.
-  If no skeleton URI was configured, skip to next step.
-
-+ Install [Composer] in vendor/bin of projects root directory.
-
-+ Selfupdate the previously installed [Composer]
-
-+ Install all packages ([Composer] packages) configured for the current
-  Profile. If no packages were defined, skip to next step.
-</code></pre>
-
-<p>Basically, when You don't define a Skeleton Application URI (SA)
-and don't define any packages (PKG) You'll end up with an empty
-project, containing:</p>
-
-<pre><code> + project-name
-   + vendor
-     + bin
-       + composer.phar
-     + composer
-       + ClassLoader.php
-       + autoload_classmap.php
-       + autoload_namespaces.php
-       + autoload_real.php
-     + autoload.php
-     + .gitignore
-   + .gitignore
-   + composer.json
-   + README.md
-   + LICENSE.md
-</code></pre>
-
 <h2>Links</h2>
 
 <ul>
 <li>
-<a href="http://www.gnu.org/software/bash/bash.html">Bash</a>: <a href="http://www.gnu.org/software/bash/bash.html">http://www.gnu.org/software/bash/bash.html</a>
-</li>
+<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a> - </li>
 <li>
-<a href="http://getcomposer.org/">Composer</a>: <a href="http://getcomposer.org/">http://getcomposer.org/</a>
-</li>
+<a href="http://www.gnu.org/software/bash/bash.html">Bash</a> - </li>
 <li>
-<a href="http://framework.zend.com/">ZendFramework</a>: <a href="http://framework.zend.com/">http://framework.zend.com/</a>
-</li>
+<a href="http://getcomposer.org/">Composer</a> - </li>
 <li>
-<a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a>: <a href="https://github.com/zendframework/ZendSkeletonApplication">https://github.com/zendframework/ZendSkeletonApplication</a>
-</li>
+<a href="http://www.gnu.org/software/sed/">GNU sed</a> - </li>
 <li>
-<a href="http://git-scm.com/">Git</a>: <a href="http://git-scm.com/">http://git-scm.com/</a>
-</li>
+<a href="https://github.com/">GitHub</a> - </li>
 <li>
-<a href="https://github.com/">GitHub</a>: <a href="https://github.com/">https://github.com/</a>
-</li>
+<a href="http://git-scm.com/">Git</a> - </li>
 <li>
-<a href="http://www.gnu.org/software/grep/">grep</a>: <a href="http://www.gnu.org/software/grep/">http://www.gnu.org/software/grep/</a>
-</li>
+<a href="http://lynx.isc.org/">Lynx</a> - </li>
 <li>
-<a href="http://php.net/">PHP</a>: <a href="http://php.net/">http://php.net/</a>
-</li>
+<a href="https://github.com/sebastianbergmann/phpunit/" title="The PHP Unit Testing framework">PHPUnit</a> - The PHP Unit Testing framework</li>
 <li>
-<a href="http://www.gnu.org/software/sed/">sed</a>: <a href="http://www.gnu.org/software/sed/">http://www.gnu.org/software/sed/</a>
-</li>
+<a href="http://php.net/">PHP</a> - </li>
 <li>
-<a href="http://websafe.github.com/caq/">caq</a>: <a href="http://websafe.github.com/caq/">http://websafe.github.com/caq/</a>
-</li>
+<a href="https://github.com/websafe/caq/issues">Report issues</a> - </li>
 <li>
-<a href="https://github.com/websafe/caq/issues">Report issues</a>: <a href="https://github.com/websafe/caq/issues">https://github.com/websafe/caq/issues</a>
-</li>
+<a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a> - </li>
 <li>
-<a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a>: <a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open</a>
-</li>
+<a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> - The Symfony PHP framework</li>
 <li>
-<a href="http://symfony.com/">Symfony</a>: <a href="http://symfony.com/">http://symfony.com/</a>
-</li>
+<a href="http://www.gnu.org/software/wget/">Wget</a> - </li>
 <li>
-<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a>:<a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star</a>
-</li>
+<a href="https://github.com/websafe/caq/wiki/" title="Caq Wiki">Wiki</a> - Caq Wiki</li>
+<li>
+<a href="https://github.com/WordPress/WordPress">WordPress</a> - </li>
+<li>
+<a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> - Framework for modern high-performing PHP applications</li>
+<li>
+<a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonAplication</a> - Sample application skeleton using the ZF2 MVC layer</li>
+<li>
+<a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> - </li>
+<li>
+<a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> - A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.</li>
+<li>
+<a href="http://websafe.github.com/caq/" title="caq - Composed Application Quickstarter">caq</a> - caq - Composed Application Quickstarter</li>
+<li>
+<a href="http://www.gnu.org/software/grep/">grep</a> - </li>
+<li>
+<a href="http://www.phpdoc.org/" title="Documentation Generator for PHP">phpDocumentor</a> - Documentation Generator for PHP</li>
 </ul>
       </section>
       <footer>
