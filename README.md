@@ -64,7 +64,7 @@ caq <vendor>/<project> <profile>
 
 
 
-### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework] 
+### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework]
 
 This will create a project located in directory `./my-example-1` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
@@ -89,10 +89,10 @@ caq myvendor/my-example-2 zf2
 
 
 
-### Example 3. An [Symfony Standard Edition] based project.
+### Example 3. A [Symfony Standard Edition] based project.
 
 This will create a project located in directory `./my-example-3` based 
-on [Symfony Standard Edition]:
+on the [Symfony Standard Edition] skeleton:
 
 ~~~~
 caq myvendor/my-example-3 symfony-standard
@@ -173,19 +173,15 @@ Requirements
 
 TODO
 --------------------------------------------------------------------------------
- + check if profile exists and notify when using default.
+
  + create documentation describing [Profiles]
- + create terms section in readme
  + classmap_generator after installing deps
- + Create README.md if not exists
- + Create LICENSE.md if LICENSE.md|LICENSE.txt|LICENSE not exist
  + User configs profiles in ~/.caq/
  + User templates for faster creation of projects (stored in ~/.caq/templates)
  + Plugins
  + Profiles testsuite
  + travis
  + testprofiles - with/without skeleton, with/without packages, emtpy, etc.
- + initiate local git repository for generated project
  + Windows/Cygwin compatible
 
 
