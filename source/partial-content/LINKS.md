@@ -20,3 +20,5 @@
 [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"
 [PHPUnit]: https://github.com/sebastianbergmann/phpunit/ "The PHP Unit Testing framework"
 [ZfcUser]: https://github.com/ZF-Commons/ZfcUser "A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2."
+[Symfony Standard Edition]: https://github.com/symfony/symfony-standard "The 'Symfony Standard Edition' distribution"
+[Twig]: https://github.com/fabpot/Twig "Twig, the flexible, fast, and secure template language for PHP"
