@@ -64,7 +64,7 @@ caq <vendor>/<project> <profile>
 
 
 
-### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework]
+### Example 1. A [ZendSkeletonApplication] based project with [ZendFramework]
 
 This will create a project located in directory `./my-example-1` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
@@ -123,7 +123,7 @@ caq myvendor/my-example-5 wordpress
 
 
 
-### Example 6. A [ZendSkeletonAplication] based project with [ZendFramework] libraries and [ZfcUser] module  
+### Example 6. A [ZendSkeletonApplication] based project with [ZendFramework] libraries and [ZfcUser] module  
 
 This will create a project located in directory `./my-example-6` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
@@ -276,8 +276,7 @@ Links
  + [Wiki] - Caq Wiki
  + [WordPress] - Blog Tool, Publishing Platform and CMS
  + [ZendFramework] - Framework for modern high-performing PHP applications
- + [ZendSkeletonAplication] - Sample application skeleton using the ZF2 MVC layer
- + [ZendSkeletonApplication] - 
+ + [ZendSkeletonApplication] - Sample application skeleton using the ZF2 MVC layer
  + [ZfcUser] - A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.
  + [caq] - caq - Composed Application Quickstarter
  + [grep] - Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.
@@ -287,7 +286,6 @@ Links
 [Bash]: http://www.gnu.org/software/bash/bash.html
 [Composer]: http://getcomposer.org/
 [ZendFramework]: http://framework.zend.com/ "Framework for modern high-performing PHP applications"
-[ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication
 [Git]: http://git-scm.com/ "A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
 [GitHub]: https://github.com/ "Online project hosting using Git."
 [grep]: http://www.gnu.org/software/grep/ "Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression."
@@ -301,7 +299,7 @@ Links
 [Wiki]: https://github.com/websafe/caq/wiki/ "Caq Wiki"
 [Symfony]: http://symfony.com/ "The Symfony PHP framework"
 [14 Ways to Contribute to Open Source without Being a Programming Genius]: http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
-[ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
+[ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
 [WordPress]: https://github.com/WordPress/WordPress "Blog Tool, Publishing Platform and CMS"
 [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"
 [PHPUnit]: https://github.com/sebastianbergmann/phpunit/ "The PHP Unit Testing framework"

@@ -12,7 +12,7 @@ caq <vendor>/<project> <profile>
 
 
 
-### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework]
+### Example 1. A [ZendSkeletonApplication] based project with [ZendFramework]
 
 This will create a project located in directory `./my-example-1` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
@@ -71,7 +71,7 @@ caq myvendor/my-example-5 wordpress
 
 
 
-### Example 6. A [ZendSkeletonAplication] based project with [ZendFramework] libraries and [ZfcUser] module  
+### Example 6. A [ZendSkeletonApplication] based project with [ZendFramework] libraries and [ZfcUser] module  
 
 This will create a project located in directory `./my-example-6` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
