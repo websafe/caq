@@ -398,7 +398,6 @@ fi
 ### An empty project with [Symfony Framework] libraries.
 ###
 ### PROFILE:symfony
-### SA:symfony:
 ### PKG:symfony:symfony/symfony:*
 ###
 ###
@@ -406,7 +405,6 @@ fi
 ### An empty project with [Twig] libraries.
 ###
 ### PROFILE:twig
-### SA:twig:
 ### PKG:twig:twig/twig:1.*
 ###
 ###
@@ -414,7 +412,6 @@ fi
 ### Empty project with Twitter Bootstap and ZendFramework libraries in `./vendor/`.
 ###
 ### PROFILE:wbf-empty-tb-zf2
-### SA:wbf-empty-tb-zf2:
 ### PKG:wbf-empty-tb-zf2:zendframework/zendframework:2.1.3
 ### PKG:wbf-empty-tb-zf2:twitter/bootstrap:*
 ###
@@ -471,7 +468,6 @@ fi
 ### Pure ZendFramework 2 project without Skeleton, only framework in vendors/.
 ###
 ### PROFILE:zf2
-### SA:zf2:
 ### PKG:zf2:zendframework/zendframework:2.1.3
 ###
 ###
