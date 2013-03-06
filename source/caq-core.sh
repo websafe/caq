@@ -24,6 +24,7 @@
 ## -----------------------------------------------------------------------------
 set -e
 ## -----------------------------------------------------------------------------
+CMD_CAT=${CMD_CAT:-/usr/bin/cat}
 CMD_CP=${CMD_CP:-/usr/bin/cp}
 CMD_CURL=${CMD_CURL:-/usr/bin/curl}
 CMD_CUT=${CMD_CUT:-/usr/bin/cut}
@@ -268,7 +269,7 @@ else
             ##
             ##
             if [ ! -r composer.json ]; then
-        	echo "No initial 'composer.json' found - creating from template."
+        	echo "No initial 'composer.json' found. Creating from template."
         	extractContent "CJ:default" \
             	    | ${CMD_SED} \
                 	-e "s/PROJECT_VENDOR/${vendor}/g" \
@@ -277,7 +278,17 @@ else
                 	-e "s/PROJECT_KEYWORDS/${keywords}/g" \
                 	-e "s/PROJECT_LICENSE/${license}/g" \
             	    > composer.json
+            else
+        	echo "Found 'composer.json' in skeleton, updating name..."
+        	${CMD_CAT} composer.json
+        	${CMD_CAT} composer.json \
+        	    | ${CMD_SED} \
+        		-e "s/\"name\":.*,/\"name\": \"${vendor}\/${project}\",/g" \
+        		> composer.json.tmp
+        	cat composer.json.tmp
+        	${CMD_MV} composer.json.tmp composer.json
             fi
+            ${CMD_CAT} composer.json
             ##
             ## GIT
             ##
