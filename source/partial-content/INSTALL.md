@@ -17,7 +17,7 @@ chmod +x /usr/bin/caq
 ~~~~
 
 
-### Install using [Wget]
+### Install using [GNU Wget]
 
 ~~~~
 wget -nc \

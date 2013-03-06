@@ -2,12 +2,12 @@
 [Composer]: http://getcomposer.org/
 [ZendFramework]: http://framework.zend.com/ "Framework for modern high-performing PHP applications"
 [ZendSkeletonApplication]: https://github.com/zendframework/ZendSkeletonApplication
-[Git]: http://git-scm.com/
-[GitHub]: https://github.com/
-[grep]: http://www.gnu.org/software/grep/
-[Wget]: http://www.gnu.org/software/wget/
+[Git]: http://git-scm.com/ "A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
+[GitHub]: https://github.com/ "Online project hosting using Git."
+[grep]: http://www.gnu.org/software/grep/ "Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression."
+[GNU Wget]: http://www.gnu.org/software/wget/ "A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc."
 [Lynx]: http://lynx.isc.org/
-[PHP]: http://php.net/
+[PHP]: http://php.net/ "A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML."
 [GNU sed]: http://www.gnu.org/software/sed/
 [caq]: http://websafe.github.com/caq/ "caq - Composed Application Quickstarter"
 [Report issues]: https://github.com/websafe/caq/issues
@@ -16,7 +16,7 @@
 [Symfony]: http://symfony.com/ "The Symfony PHP framework"
 [14 Ways to Contribute to Open Source without Being a Programming Genius]: http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
 [ZendSkeletonAplication]: https://github.com/zendframework/ZendSkeletonApplication "Sample application skeleton using the ZF2 MVC layer"
-[WordPress]: https://github.com/WordPress/WordPress
+[WordPress]: https://github.com/WordPress/WordPress "Blog Tool, Publishing Platform and CMS"
 [phpDocumentor]: http://www.phpdoc.org/ "Documentation Generator for PHP"
 [PHPUnit]: https://github.com/sebastianbergmann/phpunit/ "The PHP Unit Testing framework"
 [ZfcUser]: https://github.com/ZF-Commons/ZfcUser "A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2."
