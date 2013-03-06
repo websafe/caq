@@ -1,16 +1,16 @@
-[Bash]: http://www.gnu.org/software/bash/bash.html
-[Composer]: http://getcomposer.org/
+[Bash]: http://www.gnu.org/software/bash/bash.html "Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)."
+[Composer]: http://getcomposer.org/ "Dependency Manager for PHP"
 [ZendFramework]: http://framework.zend.com/ "Framework for modern high-performing PHP applications"
 [Git]: http://git-scm.com/ "A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
 [GitHub]: https://github.com/ "Online project hosting using Git."
 [grep]: http://www.gnu.org/software/grep/ "Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression."
 [GNU Wget]: http://www.gnu.org/software/wget/ "A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc."
-[Lynx]: http://lynx.isc.org/
+[Lynx]: http://lynx.isc.org/ "Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals."
 [PHP]: http://php.net/ "A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML."
-[GNU sed]: http://www.gnu.org/software/sed/
+[GNU sed]: http://www.gnu.org/software/sed/ "A Unix utility that parses text and implements a programming language which can apply transformations to such text."
 [caq]: http://websafe.github.com/caq/ "caq - Composed Application Quickstarter"
-[Report issues]: https://github.com/websafe/caq/issues
-[Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open
+[Report issues]: https://github.com/websafe/caq/issues "Caq - Report issues"
+[Request features]: https://github.com/websafe/caq/issues?labels=enhancement&page=1&state=open "Caq - Request features"
 [Wiki]: https://github.com/websafe/caq/wiki/ "Caq Wiki"
 [Symfony]: http://symfony.com/ "The Symfony PHP framework"
 [14 Ways to Contribute to Open Source without Being a Programming Genius]: http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star
