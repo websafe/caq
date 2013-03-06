@@ -33,7 +33,7 @@ echo "" >> ../../README.md
 echo "Links" >> ../../README.md
 echo "--------------------------------------------------------------------------------" >> ../../README.md
 echo "" >> ../../README.md
-for linkrow in $(grep -E "^\[" ../../source/partial-content/LINKS.md | sort); do
+for linkrow in $(grep -E "^\[" ../../source/partial-content/LINKS.md | cut -d'[' -f2 | sort -df); do
     linktitle=$(echo $linkrow | cut -d'[' -f2 | cut -d']' -f1)
     linkuri=$(echo $linkrow | cut -d':' -f2- | cut -d'"' -f1 | tr -d ' ')
     linkdescr=$(echo $linkrow | cut -d':' -f2- | cut -d'"' -f2 | grep -vE "^ ")

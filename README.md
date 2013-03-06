@@ -260,27 +260,27 @@ Links
 
  + [14 Ways to Contribute to Open Source without Being a Programming Genius] - 
  + [Bash] - Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh).
+ + [caq] - caq - Composed Application Quickstarter
  + [Composer] - Dependency Manager for PHP
- + [GNU Wget] - A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
- + [GNU sed] - A Unix utility that parses text and implements a programming language which can apply transformations to such text.
- + [GitHub] - Online project hosting using Git.
  + [Git] - A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+ + [GitHub] - Online project hosting using Git.
+ + [GNU sed] - A Unix utility that parses text and implements a programming language which can apply transformations to such text.
+ + [GNU Wget] - A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
+ + [grep] - Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.
  + [Lynx] - Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals.
- + [PHPUnit] - The PHP Unit Testing framework
  + [PHP] - A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.
+ + [phpDocumentor] - Documentation Generator for PHP
+ + [PHPUnit] - The PHP Unit Testing framework
  + [Report issues] - Caq - Report issues
  + [Request features] - Caq - Request features
- + [Symfony Standard Edition] - The 'Symfony Standard Edition' distribution
  + [Symfony] - The Symfony PHP framework
+ + [Symfony Standard Edition] - The 'Symfony Standard Edition' distribution
  + [Twig] - Twig, the flexible, fast, and secure template language for PHP
  + [Wiki] - Caq Wiki
  + [WordPress] - Blog Tool, Publishing Platform and CMS
  + [ZendFramework] - Framework for modern high-performing PHP applications
  + [ZendSkeletonApplication] - Sample application skeleton using the ZF2 MVC layer
  + [ZfcUser] - A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.
- + [caq] - caq - Composed Application Quickstarter
- + [grep] - Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.
- + [phpDocumentor] - Documentation Generator for PHP
 
 
 [Bash]: http://www.gnu.org/software/bash/bash.html "Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)."
