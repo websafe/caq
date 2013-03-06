@@ -12,7 +12,7 @@ caq <vendor>/<project> <profile>
 
 
 
-### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework] 
+### Example 1. A [ZendSkeletonAplication] based project with [ZendFramework]
 
 This will create a project located in directory `./my-example-1` based 
 on [ZendSkeletonApplication] with [ZendFramework] installed as a [Composer]
@@ -37,10 +37,10 @@ caq myvendor/my-example-2 zf2
 
 
 
-### Example 3. An [Symfony Standard Edition] based project.
+### Example 3. A [Symfony Standard Edition] based project.
 
 This will create a project located in directory `./my-example-3` based 
-on [Symfony Standard Edition]:
+on the [Symfony Standard Edition] skeleton:
 
 ~~~~
 caq myvendor/my-example-3 symfony-standard
