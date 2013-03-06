@@ -30,7 +30,7 @@
       <section>
         <h1>caq - Composed Application Quickstarter</h1>
 
-<p>A simple <a href="http://www.gnu.org/software/bash/bash.html">Bash</a> script for automated preparation of <a href="http://getcomposer.org/">Composer</a> based
+<p>A simple <a href="http://www.gnu.org/software/bash/bash.html" title="Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh).">Bash</a> script for automated preparation of <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> based
 applications (i.e. <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> apps).</p>
 
 <h2>Installation</h2>
@@ -41,7 +41,7 @@ applications (i.e. <a href="http://framework.zend.com/" title="Framework for mod
 required, download it into a location available via PATH and make it executable.
 That's all.</p>
 
-<h3>Install using <a href="http://php.net/">PHP</a>
+<h3>Install using <a href="http://php.net/" title="A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.">PHP</a>
 </h3>
 
 <pre><code>php -r \
@@ -49,7 +49,7 @@ That's all.</p>
 chmod +x /usr/bin/caq
 </code></pre>
 
-<h3>Install using <a href="http://www.gnu.org/software/wget/">Wget</a>
+<h3>Install using <a href="http://www.gnu.org/software/wget/" title="A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.">GNU Wget</a>
 </h3>
 
 <pre><code>wget -nc \
@@ -65,7 +65,7 @@ chmod +x /usr/bin/caq
                                 existing files (overwriting them).</p>
 </blockquote>
 
-<h3>Install using <a href="http://lynx.isc.org/">Lynx</a>
+<h3>Install using <a href="http://lynx.isc.org/" title="Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals.">Lynx</a>
 </h3>
 
 <pre><code>lynx -dump \
@@ -83,11 +83,11 @@ chmod +x /usr/bin/caq
 <pre><code>caq &lt;vendor&gt;/&lt;project&gt; &lt;profile&gt;
 </code></pre>
 
-<h3>Example 1. A <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonAplication</a> based project with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a>
+<h3>Example 1. A <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonApplication</a> based project with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a>
 </h3>
 
 <p>This will create a project located in directory <code>./my-example-1</code> based 
-on <a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a <a href="http://getcomposer.org/">Composer</a>
+on <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a>
 package in <code>./vendor/zendframework</code>:</p>
 
 <pre><code>caq myvendor/my-example-1 zf2-app
@@ -97,73 +97,84 @@ package in <code>./vendor/zendframework</code>:</p>
 
 <p>This will create a project located in directory <code>./my-example-2</code> based 
 on nothing (no skeleton application) with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a
-<a href="http://getcomposer.org/">Composer</a> package in <code>./vendor/zendframework</code>, in other words, a project
+<a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> package in <code>./vendor/zendframework</code>, in other words, a project
 with the pure framework, no application:</p>
 
 <pre><code>caq myvendor/my-example-2 zf2
 </code></pre>
 
-<h3>Example 3. An empty project with <a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> libraries</h3>
+<h3>Example 3. A <a href="https://github.com/symfony/symfony-standard" title="The 'Symfony Standard Edition' distribution">Symfony Standard Edition</a> based project.</h3>
 
 <p>This will create a project located in directory <code>./my-example-3</code> based 
-on nothing (no skeleton application) with <a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> installed as <a href="http://getcomposer.org/">Composer</a> 
-package in <code>./vendor/symfony</code>:</p>
+on the <a href="https://github.com/symfony/symfony-standard" title="The 'Symfony Standard Edition' distribution">Symfony Standard Edition</a> skeleton:</p>
 
-<pre><code>caq myvendor/my-example-3 symfony
+<pre><code>caq myvendor/my-example-3 symfony-standard
 </code></pre>
 
-<h3>Example 4. A <a href="https://github.com/WordPress/WordPress">WordPress</a> based project</h3>
+<h3>Example 4. An empty project with <a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> libraries</h3>
 
 <p>This will create a project located in directory <code>./my-example-4</code> based 
-on <a href="https://github.com/WordPress/WordPress">WordPress</a>:</p>
+on nothing (no skeleton application) with <a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> installed as <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> 
+package in <code>./vendor/symfony</code>:</p>
 
-<pre><code>caq myvendor/my-example-4 wordpress
+<pre><code>caq myvendor/my-example-4 symfony
 </code></pre>
 
-<h3>Example 5. A <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonAplication</a> based project with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> libraries and <a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> module</h3>
+<h3>Example 5. A <a href="https://github.com/WordPress/WordPress" title="Blog Tool, Publishing Platform and CMS">WordPress</a> based project</h3>
 
 <p>This will create a project located in directory <code>./my-example-5</code> based 
-on <a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a <a href="http://getcomposer.org/">Composer</a>
-package in <code>./vendor/zendframework/zendframework</code> and <a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> module installed
-as a <a href="http://getcomposer.org/">Composer</a> package in <code>./vendor/zf-commons/zfc-user</code>:</p>
+on <a href="https://github.com/WordPress/WordPress" title="Blog Tool, Publishing Platform and CMS">WordPress</a>:</p>
 
-<pre><code>caq myvendor/my-example-5 zf2-app-zfc-user
+<pre><code>caq myvendor/my-example-5 wordpress
+</code></pre>
+
+<h3>Example 6. A <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonApplication</a> based project with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> libraries and <a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> module</h3>
+
+<p>This will create a project located in directory <code>./my-example-6</code> based 
+on <a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonApplication</a> with <a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> installed as a <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a>
+package in <code>./vendor/zendframework/zendframework</code> and <a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> module installed
+as a <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> package in <code>./vendor/zf-commons/zfc-user</code>:</p>
+
+<pre><code>caq myvendor/my-example-6 zf2-app-zfc-user
+</code></pre>
+
+<h3>Example 7. An empty project with <a href="https://github.com/fabpot/Twig" title="Twig, the flexible, fast, and secure template language for PHP">Twig</a> libraries.</h3>
+
+<p>This will create an empty project located in directory <code>./my-example-7</code>
+with <a href="https://github.com/fabpot/Twig" title="Twig, the flexible, fast, and secure template language for PHP">Twig</a> libraries installed as a <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> package in <code>./vendor/twig/twig</code>:</p>
+
+<pre><code>caq myvendor/my-example-7 twig
 </code></pre>
 
 <h2>Contributing</h2>
 
 <ul>
 <li>Start using <a href="http://websafe.github.com/caq/" title="caq - Composed Application Quickstarter">caq</a>!</li>
-<li><a href="https://github.com/websafe/caq/issues">Report issues</a></li>
-<li><a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a></li>
+<li><a href="https://github.com/websafe/caq/issues" title="Caq - Report issues">Report issues</a></li>
+<li><a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open" title="Caq - Request features">Request features</a></li>
 <li>Read
 <a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a>
 </li>
 </ul><h2>Requirements</h2>
 
 <ul>
-<li><a href="http://www.gnu.org/software/bash/bash.html">Bash</a></li>
-<li><a href="http://getcomposer.org/">Composer</a></li>
-<li><a href="http://git-scm.com/">Git</a></li>
-<li><a href="http://www.gnu.org/software/grep/">grep</a></li>
-<li><a href="http://php.net/">PHP</a></li>
-<li><a href="http://www.gnu.org/software/sed/">GNU sed</a></li>
+<li><a href="http://www.gnu.org/software/bash/bash.html" title="Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh).">Bash</a></li>
+<li><a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a></li>
+<li><a href="http://git-scm.com/" title="A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.">Git</a></li>
+<li><a href="http://www.gnu.org/software/grep/" title="Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.">grep</a></li>
+<li><a href="http://php.net/" title="A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.">PHP</a></li>
+<li><a href="http://www.gnu.org/software/sed/" title="A Unix utility that parses text and implements a programming language which can apply transformations to such text.">GNU sed</a></li>
 </ul><h2>TODO</h2>
 
 <ul>
-<li>check if profile exists and notify when using default.</li>
 <li>create documentation describing [Profiles]</li>
-<li>create terms section in readme</li>
 <li>classmap_generator after installing deps</li>
-<li>Create README.md if not exists</li>
-<li>Create LICENSE.md if LICENSE.md|LICENSE.txt|LICENSE not exist</li>
 <li>User configs profiles in ~/.caq/</li>
 <li>User templates for faster creation of projects (stored in ~/.caq/templates)</li>
 <li>Plugins</li>
 <li>Profiles testsuite</li>
 <li>travis</li>
 <li>testprofiles - with/without skeleton, with/without packages, emtpy, etc.</li>
-<li>initiate local git repository for generated project</li>
 <li>Windows/Cygwin compatible</li>
 </ul><h2>How caq works</h2>
 
@@ -175,9 +186,9 @@ as a <a href="http://getcomposer.org/">Composer</a> package in <code>./vendor/zf
 <li><p>If there is a [Skeleton Application] URI configured, try to clone this
 repo into projects root directory.
 If no skeleton URI was configured, skip to next step.</p></li>
-<li><p>Install <a href="http://getcomposer.org/">Composer</a> in vendor/bin of projects root directory.</p></li>
-<li><p>Selfupdate the previously installed <a href="http://getcomposer.org/">Composer</a></p></li>
-<li><p>Install all packages (<a href="http://getcomposer.org/">Composer</a> packages) configured for the current
+<li><p>Install <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> in vendor/bin of projects root directory.</p></li>
+<li><p>Selfupdate the previously installed <a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a></p></li>
+<li><p>Install all packages (<a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> packages) configured for the current
 Profile. If no packages were defined, skip to next step.</p></li>
 </ol><p>Basically, when You don't define a Skeleton Application URI (SA)
 and don't define any packages (PKG) You'll end up with an empty
@@ -230,47 +241,49 @@ THE SOFTWARE.</p>
 <li>
 <a href="http://blog.smartbear.com/software-quality/bid/167051/14-Ways-to-Contribute-to-Open-Source-without-Being-a-Programming-Genius-or-a-Rock-Star">14 Ways to Contribute to Open Source without Being a Programming Genius</a> - </li>
 <li>
-<a href="http://www.gnu.org/software/bash/bash.html">Bash</a> - </li>
-<li>
-<a href="http://getcomposer.org/">Composer</a> - </li>
-<li>
-<a href="http://www.gnu.org/software/sed/">GNU sed</a> - </li>
-<li>
-<a href="https://github.com/">GitHub</a> - </li>
-<li>
-<a href="http://git-scm.com/">Git</a> - </li>
-<li>
-<a href="http://lynx.isc.org/">Lynx</a> - </li>
-<li>
-<a href="https://github.com/sebastianbergmann/phpunit/" title="The PHP Unit Testing framework">PHPUnit</a> - The PHP Unit Testing framework</li>
-<li>
-<a href="http://php.net/">PHP</a> - </li>
-<li>
-<a href="https://github.com/websafe/caq/issues">Report issues</a> - </li>
-<li>
-<a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open">Request features</a> - </li>
-<li>
-<a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> - The Symfony PHP framework</li>
-<li>
-<a href="http://www.gnu.org/software/wget/">Wget</a> - </li>
-<li>
-<a href="https://github.com/websafe/caq/wiki/" title="Caq Wiki">Wiki</a> - Caq Wiki</li>
-<li>
-<a href="https://github.com/WordPress/WordPress">WordPress</a> - </li>
-<li>
-<a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> - Framework for modern high-performing PHP applications</li>
-<li>
-<a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonAplication</a> - Sample application skeleton using the ZF2 MVC layer</li>
-<li>
-<a href="https://github.com/zendframework/ZendSkeletonApplication">ZendSkeletonApplication</a> - </li>
-<li>
-<a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> - A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.</li>
+<a href="http://www.gnu.org/software/bash/bash.html" title="Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh).">Bash</a> - Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh).</li>
 <li>
 <a href="http://websafe.github.com/caq/" title="caq - Composed Application Quickstarter">caq</a> - caq - Composed Application Quickstarter</li>
 <li>
-<a href="http://www.gnu.org/software/grep/">grep</a> - </li>
+<a href="http://getcomposer.org/" title="Dependency Manager for PHP">Composer</a> - Dependency Manager for PHP</li>
+<li>
+<a href="http://git-scm.com/" title="A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.">Git</a> - A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</li>
+<li>
+<a href="https://github.com/" title="Online project hosting using Git.">GitHub</a> - Online project hosting using Git.</li>
+<li>
+<a href="http://www.gnu.org/software/sed/" title="A Unix utility that parses text and implements a programming language which can apply transformations to such text.">GNU sed</a> - A Unix utility that parses text and implements a programming language which can apply transformations to such text.</li>
+<li>
+<a href="http://www.gnu.org/software/wget/" title="A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.">GNU Wget</a> - A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.</li>
+<li>
+<a href="http://www.gnu.org/software/grep/" title="Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.">grep</a> - Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.</li>
+<li>
+<a href="http://lynx.isc.org/" title="Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals.">Lynx</a> - Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals.</li>
+<li>
+<a href="http://php.net/" title="A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.">PHP</a> - A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</li>
 <li>
 <a href="http://www.phpdoc.org/" title="Documentation Generator for PHP">phpDocumentor</a> - Documentation Generator for PHP</li>
+<li>
+<a href="https://github.com/sebastianbergmann/phpunit/" title="The PHP Unit Testing framework">PHPUnit</a> - The PHP Unit Testing framework</li>
+<li>
+<a href="https://github.com/websafe/caq/issues" title="Caq - Report issues">Report issues</a> - Caq - Report issues</li>
+<li>
+<a href="https://github.com/websafe/caq/issues?labels=enhancement&amp;page=1&amp;state=open" title="Caq - Request features">Request features</a> - Caq - Request features</li>
+<li>
+<a href="http://symfony.com/" title="The Symfony PHP framework">Symfony</a> - The Symfony PHP framework</li>
+<li>
+<a href="https://github.com/symfony/symfony-standard" title="The 'Symfony Standard Edition' distribution">Symfony Standard Edition</a> - The 'Symfony Standard Edition' distribution</li>
+<li>
+<a href="https://github.com/fabpot/Twig" title="Twig, the flexible, fast, and secure template language for PHP">Twig</a> - Twig, the flexible, fast, and secure template language for PHP</li>
+<li>
+<a href="https://github.com/websafe/caq/wiki/" title="Caq Wiki">Wiki</a> - Caq Wiki</li>
+<li>
+<a href="https://github.com/WordPress/WordPress" title="Blog Tool, Publishing Platform and CMS">WordPress</a> - Blog Tool, Publishing Platform and CMS</li>
+<li>
+<a href="http://framework.zend.com/" title="Framework for modern high-performing PHP applications">ZendFramework</a> - Framework for modern high-performing PHP applications</li>
+<li>
+<a href="https://github.com/zendframework/ZendSkeletonApplication" title="Sample application skeleton using the ZF2 MVC layer">ZendSkeletonApplication</a> - Sample application skeleton using the ZF2 MVC layer</li>
+<li>
+<a href="https://github.com/ZF-Commons/ZfcUser" title="A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.">ZfcUser</a> - A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2.</li>
 </ul>
       </section>
       <footer>
