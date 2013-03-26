@@ -147,6 +147,13 @@ caq myvendor/my-example-7 twig
 
 
 
+### Example 8. A [Kohana PHP Framework] based project. 
+
+This will create a [Kohana PHP Framework] based project located in directory `./my-example-8`:
+
+~~~~
+caq myvendor/my-example-8 kohana
+~~~~
 
 
 
