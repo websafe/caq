@@ -104,3 +104,31 @@ caq myvendor/my-example-8 kohana
 ~~~~
 
 
+### Example 9. A [Drupal] based project.
+
+This will create a [Drupal] based project located in directory `./my-example-9`:
+
+~~~~
+caq myvendor/my-example-9 drupal
+~~~~
+
+
+
+### Example 10. A [CodeIgniter] based project.
+
+This will create a [CodeIgniter] based project located in directory `./my-example-10`:
+
+~~~~
+caq myvendor/my-example-10 codeigniter
+~~~~
+
+
+
+### Example 11. A [Joomla] based project.
+
+This will create a [Joomla] based project located in directory `./my-example-11`:
+
+~~~~
+caq myvendor/my-example-11 joomla
+~~~~
+

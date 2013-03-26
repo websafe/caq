@@ -24,3 +24,5 @@
 [Kohana PHP Framework]: http://kohanaframework.org/ "An elegant HMVC PHP5 framework that provides a rich set of components for building web applications."
 [CakePHP]: https://github.com/cakephp/cakephp "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
 [CodeIgniter]: https://github.com/EllisLab/CodeIgniter "CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP."
+[Drupal]: http://drupal.org/ "Drupal is an open source content management platform powering millions of websites and applications."
+[CodeIgniter]: http://ellislab.com/codeigniter "CodeIgniter is a proven, agile & open PHP web application framework with a small footprint. It is powering the next generation of web apps."

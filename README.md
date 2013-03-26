@@ -156,6 +156,34 @@ caq myvendor/my-example-8 kohana
 ~~~~
 
 
+### Example 9. A [Drupal] based project.
+
+This will create a [Drupal] based project located in directory `./my-example-9`:
+
+~~~~
+caq myvendor/my-example-9 drupal
+~~~~
+
+
+
+### Example 10. A [CodeIgniter] based project.
+
+This will create a [CodeIgniter] based project located in directory `./my-example-10`:
+
+~~~~
+caq myvendor/my-example-10 codeigniter
+~~~~
+
+
+
+### Example 11. A [Joomla] based project.
+
+This will create a [Joomla] based project located in directory `./my-example-11`:
+
+~~~~
+caq myvendor/my-example-11 joomla
+~~~~
+
 
 Contributing
 --------------------------------------------------------------------------------
@@ -270,8 +298,10 @@ Links
  + [Bash] - Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh).
  + [CakePHP] - CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
  + [caq] - caq - Composed Application Quickstarter
+ + [CodeIgniter] - CodeIgniter is a proven, agile & open PHP web application framework with a small footprint. It is powering the next generation of web apps.
  + [CodeIgniter] - CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP.
  + [Composer] - Dependency Manager for PHP
+ + [Drupal] - Drupal is an open source content management platform powering millions of websites and applications.
  + [Git] - A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
  + [GitHub] - Online project hosting using Git.
  + [GNU sed] - A Unix utility that parses text and implements a programming language which can apply transformations to such text.
@@ -320,3 +350,5 @@ Links
 [Kohana PHP Framework]: http://kohanaframework.org/ "An elegant HMVC PHP5 framework that provides a rich set of components for building web applications."
 [CakePHP]: https://github.com/cakephp/cakephp "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
 [CodeIgniter]: https://github.com/EllisLab/CodeIgniter "CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP."
+[Drupal]: http://drupal.org/ "Drupal is an open source content management platform powering millions of websites and applications."
+[CodeIgniter]: http://ellislab.com/codeigniter "CodeIgniter is a proven, agile & open PHP web application framework with a small footprint. It is powering the next generation of web apps."
