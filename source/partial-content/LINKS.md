@@ -21,4 +21,6 @@
 [ZfcUser]: https://github.com/ZF-Commons/ZfcUser "A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2."
 [Symfony Standard Edition]: https://github.com/symfony/symfony-standard "The 'Symfony Standard Edition' distribution"
 [Twig]: https://github.com/fabpot/Twig "Twig, the flexible, fast, and secure template language for PHP"
-[Kohana PHP Framework]: http://kohanaframework.org/
+[Kohana PHP Framework]: http://kohanaframework.org/ "An elegant HMVC PHP5 framework that provides a rich set of components for building web applications."
+[CakePHP]: https://github.com/cakephp/cakephp "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
+[CodeIgniter]: https://github.com/EllisLab/CodeIgniter "CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP."

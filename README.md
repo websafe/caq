@@ -268,14 +268,16 @@ Links
 
  + [14 Ways to Contribute to Open Source without Being a Programming Genius] - 
  + [Bash] - Bash is an sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh).
+ + [CakePHP] - CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
  + [caq] - caq - Composed Application Quickstarter
+ + [CodeIgniter] - CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP.
  + [Composer] - Dependency Manager for PHP
  + [Git] - A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
  + [GitHub] - Online project hosting using Git.
  + [GNU sed] - A Unix utility that parses text and implements a programming language which can apply transformations to such text.
  + [GNU Wget] - A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
  + [grep] - Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.
- + [Kohana PHP Framework] - 
+ + [Kohana PHP Framework] - An elegant HMVC PHP5 framework that provides a rich set of components for building web applications.
  + [Lynx] - Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals.
  + [PHP] - A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.
  + [phpDocumentor] - Documentation Generator for PHP
@@ -315,4 +317,6 @@ Links
 [ZfcUser]: https://github.com/ZF-Commons/ZfcUser "A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2."
 [Symfony Standard Edition]: https://github.com/symfony/symfony-standard "The 'Symfony Standard Edition' distribution"
 [Twig]: https://github.com/fabpot/Twig "Twig, the flexible, fast, and secure template language for PHP"
-[Kohana PHP Framework]: http://kohanaframework.org/
+[Kohana PHP Framework]: http://kohanaframework.org/ "An elegant HMVC PHP5 framework that provides a rich set of components for building web applications."
+[CakePHP]: https://github.com/cakephp/cakephp "CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC."
+[CodeIgniter]: https://github.com/EllisLab/CodeIgniter "CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP."

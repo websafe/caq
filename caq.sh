@@ -372,6 +372,13 @@ fi
 ### CJ:default:}
 ## -----------------------------------------------------------------------------
 ###
+### [CakePHP] based project.
+###
+### PROFILE:cakephp
+### SA:cakephp:git://github.com/cakephp/cakephp.git
+###
+###
+###
 ### caq
 ###
 ### PROFILE:caq
@@ -379,10 +386,31 @@ fi
 ###
 ###
 ###
+### [CodeIgniter] based project.
+###
+### PROFILE:codeigniter
+### SA:codeigniter:git://github.com/EllisLab/CodeIgniter.git
+###
+###
+###
+### [Drupal] based project.
+###
+### PROFILE:drupal
+### SA:drupal:git://github.com/drupal/drupal.git
+###
+###
+###
 ### Empty profile - results in an empty project with README.md, LICENSE.md,
 ### and [Composer] generated files.
 ###
 ### PROFILE:empty
+###
+###
+###
+### [Joomla] based project.
+###
+### PROFILE:joomla
+### SA:joomla:git://github.com/joomla/joomla-cms.git
 ###
 ###
 ###
