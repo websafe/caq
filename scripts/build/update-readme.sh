@@ -12,6 +12,9 @@ echo "" >> ../../README.md
 cat ../../source/partial-content/USAGE.md >> ../../README.md
 echo "" >> ../../README.md
 
+cat ../../source/partial-content/EXAMPLES.md >> ../../README.md
+echo "" >> ../../README.md
+
 cat ../../source/partial-content/CONTRIBUTE.md >> ../../README.md
 echo "" >> ../../README.md
 

@@ -64,6 +64,10 @@ caq <vendor>/<project> <profile>
 
 
 
+Examples
+--------------------------------------------------------------------------------
+
+
 ### Example 1. A [ZendSkeletonApplication] based project with [ZendFramework]
 
 This will create a project located in directory `./my-example-1` based 
