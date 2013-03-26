@@ -1,6 +1,7 @@
 TODO
 --------------------------------------------------------------------------------
 
+ + profile for an empty project with [Twitter Bootstrap]
  + create documentation describing [Profiles]
  + classmap_generator after installing deps
  + User configs profiles in ~/.caq/

@@ -174,6 +174,7 @@ Requirements
 TODO
 --------------------------------------------------------------------------------
 
+ + profile for an empty project with [Twitter Bootstrap]
  + create documentation describing [Profiles]
  + classmap_generator after installing deps
  + User configs profiles in ~/.caq/
@@ -267,6 +268,7 @@ Links
  + [GNU sed] - A Unix utility that parses text and implements a programming language which can apply transformations to such text.
  + [GNU Wget] - A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
  + [grep] - Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.
+ + [Kohana PHP Framework] - 
  + [Lynx] - Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals.
  + [PHP] - A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.
  + [phpDocumentor] - Documentation Generator for PHP
@@ -306,3 +308,4 @@ Links
 [ZfcUser]: https://github.com/ZF-Commons/ZfcUser "A generic user registration and authentication module for ZF2. Supports Zend\Db and Doctrine2."
 [Symfony Standard Edition]: https://github.com/symfony/symfony-standard "The 'Symfony Standard Edition' distribution"
 [Twig]: https://github.com/fabpot/Twig "Twig, the flexible, fast, and secure template language for PHP"
+[Kohana PHP Framework]: http://kohanaframework.org/

@@ -386,6 +386,13 @@ fi
 ###
 ###
 ###
+### [Kohana PHP Framework] based project.
+###
+### PROFILE:kohana
+### SA:kohana:git://github.com/kohana/kohana.git
+###
+###
+###
 ### Symfony Standard Edition - a fully-functional Symfony2
 ### application that you can use as the skeleton for your new
 ### applications.
@@ -429,7 +436,7 @@ fi
 ###
 ### PROFILE:zf2-app-full
 ### SA:zf2-app-full:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-full:zendframework/zendframework:2.1.3
+### PKG:zf2-app-full:zendframework/zendframework:2.1.4
 ### PKG:zf2-app-full:zendframework/zend-developer-tools:*
 ### PKG:zf2-app-full:zf-commons/zfc-user:*
 ### PKG:zf2-app-full:zendframework/zendpdf:*
@@ -452,7 +459,7 @@ fi
 ###
 ### PROFILE:zf2-app-zfc-user
 ### SA:zf2-app-zfc-user:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-zfc-user:zendframework/zendframework:2.1.3
+### PKG:zf2-app-zfc-user:zendframework/zendframework:2.1.4
 ### PKG:zf2-app-zfc-user:zf-commons/zfc-user:*
 ###
 ###
@@ -461,14 +468,14 @@ fi
 ###
 ### PROFILE:zf2-app
 ### SA:zf2-app:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app:zendframework/zendframework:2.1.3
+### PKG:zf2-app:zendframework/zendframework:2.1.4
 ###
 ###
 ###
 ### Pure ZendFramework 2 project without Skeleton, only framework in vendors/.
 ###
 ### PROFILE:zf2
-### PKG:zf2:zendframework/zendframework:2.1.3
+### PKG:zf2:zendframework/zendframework:2.1.4
 ###
 ###
 ### LT:MIT:Copyright (c) <year> <copyright holders>
