@@ -157,73 +157,73 @@ else
     ##
     if [ ! -r ${PROJECT_ABSPATH}/LICENSE ]; then
         if [ -r ${PROJECT_ABSPATH}/LICENSE.txt ]; then
-    	    ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE.txt \
-		${PROJECT_ABSPATH}/LICENSE
-	elif [ -r ${PROJECT_ABSPATH}/license.txt ]; then
-	    ${CMD_MV} ${PROJECT_ABSPATH}/license.txt \
-		${PROJECT_ABSPATH}/LICENSE
-	fi
+            ${CMD_MV} ${PROJECT_ABSPATH}/LICENSE.txt \
+                ${PROJECT_ABSPATH}/LICENSE
+        elif [ -r ${PROJECT_ABSPATH}/license.txt ]; then
+            ${CMD_MV} ${PROJECT_ABSPATH}/license.txt \
+                ${PROJECT_ABSPATH}/LICENSE
+        fi
     fi
     if [ ! -r ${PROJECT_ABSPATH}/LICENSE ]; then
-	##
-	## Put default license
-	##
-	extractContent "LT:MIT" > ${PROJECT_ABSPATH}/LICENSE
+        ##
+        ## Put default license
+        ##
+        extractContent "LT:MIT" > ${PROJECT_ABSPATH}/LICENSE
     fi
     ##
     ## GIT
     ##
     (
-	cd ${PROJECT_ABSPATH};
-	${CMD_GIT} add LICENSE;
+        cd ${PROJECT_ABSPATH};
+        ${CMD_GIT} add LICENSE;
         ${CMD_GIT} commit LICENSE \
-	    -m "[caq] Added initial 'LICENSE'.";
+            -m "[caq] Added initial 'LICENSE'.";
     )
     ##
     ## Tricky readme
     ##
     if [ ! -r ${PROJECT_ABSPATH}/README.md ]; then
         if [ -r ${PROJECT_ABSPATH}/REAMDE.txt ]; then
-    	    ${CMD_MV} ${PROJECT_ABSPATH}/README.txt \
-		${PROJECT_ABSPATH}/README.md
-	elif [ -r ${PROJECT_ABSPATH}/README ]; then
-	    ${CMD_MV} ${PROJECT_ABSPATH}/README \
-		${PROJECT_ABSPATH}/README.md
-	fi
+            ${CMD_MV} ${PROJECT_ABSPATH}/README.txt \
+                ${PROJECT_ABSPATH}/README.md
+        elif [ -r ${PROJECT_ABSPATH}/README ]; then
+           ${CMD_MV} ${PROJECT_ABSPATH}/README \
+               ${PROJECT_ABSPATH}/README.md
+        fi
     fi
     if [ ! -r ${PROJECT_ABSPATH}/README.md ]; then
-	##
-	## Put default README
-	##
-	echo ${project} > ${PROJECT_ABSPATH}/README.md
-	echo -n "========================================" \
-	    >> ${PROJECT_ABSPATH}/README.md
-	echo "========================================" \
-	    >> ${PROJECT_ABSPATH}/README.md
+        ##
+        ## Put default README
+        ##
+        echo ${project} > ${PROJECT_ABSPATH}/README.md
+        echo -n "========================================" \
+            >> ${PROJECT_ABSPATH}/README.md
+        echo "========================================" \
+            >> ${PROJECT_ABSPATH}/README.md
     fi
     ##
     ## GIT
     ##
     (
-	cd ${PROJECT_ABSPATH};
-	${CMD_GIT} add README.md;
-	${CMD_GIT} commit README.md \
-	    -m "[caq] Added initial 'README.md'.";
+        cd ${PROJECT_ABSPATH};
+        ${CMD_GIT} add README.md;
+        ${CMD_GIT} commit README.md \
+            -m "[caq] Added initial 'README.md'.";
     )
     ##
     ## Default gitignore
     ##
     if [ ! -r ${PROJECT_ABSPATH}/.gitignore ]; then
-	extractContent "FT:default.gitignore" > ${PROJECT_ABSPATH}/.gitignore
+        extractContent "FT:default.gitignore" > ${PROJECT_ABSPATH}/.gitignore
     fi
     ##
     ## GIT
     ##
     (
-	cd ${PROJECT_ABSPATH};
-	${CMD_GIT} add .gitignore;
-	${CMD_GIT} commit .gitignore \
-	    -m "[caq] Added initial '.gitignore'.";
+        cd ${PROJECT_ABSPATH};
+        ${CMD_GIT} add .gitignore;
+        ${CMD_GIT} commit .gitignore \
+            -m "[caq] Added initial '.gitignore'.";
     )
     ## -------------------------------------------------------------------------
     ##
@@ -261,32 +261,32 @@ else
         ##
         ##
         ## ---------------------------------------------------------------------
-	echo "Starting [Composer] self-update..."
+        echo "Starting [Composer] self-update..."
         if ${CMD_PHP} ./vendor/bin/composer.phar -n selfupdate;
         then
-        	echo "[Composer] self-update has finished."
+            echo "[Composer] self-update has finished."
             ##
             ##
             ##
             if [ ! -r composer.json ]; then
-        	echo "No initial 'composer.json' found. Creating from template."
-        	extractContent "CJ:default" \
-            	    | ${CMD_SED} \
-                	-e "s/PROJECT_VENDOR/${vendor}/g" \
-                	-e "s/PROJECT_NAME/${project}/g" \
-                	-e "s#PROJECT_HOMEPAGE#${homepage}#g" \
-                	-e "s/PROJECT_KEYWORDS/${keywords}/g" \
-                	-e "s/PROJECT_LICENSE/${license}/g" \
-            	    > composer.json
+                echo "No initial 'composer.json' found. Creating from template."
+                extractContent "CJ:default" \
+                    | ${CMD_SED} \
+                        -e "s/PROJECT_VENDOR/${vendor}/g" \
+                        -e "s/PROJECT_NAME/${project}/g" \
+                        -e "s#PROJECT_HOMEPAGE#${homepage}#g" \
+                        -e "s/PROJECT_KEYWORDS/${keywords}/g" \
+                        -e "s/PROJECT_LICENSE/${license}/g" \
+                   > composer.json
             else
-        	echo "Found 'composer.json' in skeleton, updating name..."
-        	${CMD_CAT} composer.json
-        	${CMD_CAT} composer.json \
-        	    | ${CMD_SED} \
-        		-e "s/\"name\":.*,/\"name\": \"${vendor}\/${project}\",/g" \
-        		> composer.json.tmp
-        	cat composer.json.tmp
-        	${CMD_MV} composer.json.tmp composer.json
+                echo "Found 'composer.json' in skeleton, updating name..."
+                ${CMD_CAT} composer.json
+                ${CMD_CAT} composer.json \
+                    | ${CMD_SED} \
+                        -e "s/\"name\":.*,/\"name\": \"${vendor}\/${project}\",/g" \
+                    > composer.json.tmp
+                cat composer.json.tmp
+                ${CMD_MV} composer.json.tmp composer.json
             fi
             ${CMD_CAT} composer.json
             ##
@@ -294,7 +294,7 @@ else
             ##
             ${CMD_GIT} add composer.json
             ${CMD_GIT} commit composer.json \
-        	-m "[caq] Added initial 'composer.json'."
+                -m "[caq] Added initial 'composer.json'."
             ##
             ##
             ##
@@ -303,7 +303,7 @@ else
             ## GIT
             ##
             ${CMD_GIT} commit composer.json \
-        	-m "[caq] Updated [Composer] config."
+                -m "[caq] Updated [Composer] config."
             #${CMD_PHP} vendor/bin/composer.phar -n update
             ## ----------------------------------------------------------------
             ##
@@ -318,17 +318,17 @@ else
                         | ${CMD_CUT} -d' ' -f1
                 );
             do
-            	echo "Starting installation of package ${dep}..."
+                echo "Starting installation of package ${dep}..."
                 ## Install dependency (composer.json gets updated too):
                 if ${CMD_PHP} vendor/bin/composer.phar \
                     require -n "${dep}";
                 then
-                	echo "Installation of package ${dep} has finished."
-                	##
-                	## GIT
-                	##
-                	${CMD_GIT} commit composer.json \
-                	    -m "[caq] Added [Composer] package ${dep}."
+                    echo "Installation of package ${dep} has finished."
+                    ##
+                    ## GIT
+                    ##
+                    ${CMD_GIT} commit composer.json \
+                        -m "[caq] Added [Composer] package ${dep}."
                 else
                     echo "Problem while installing ${dep}"
                     exit 5;
@@ -338,12 +338,12 @@ else
             ##
             ##
             ${CMD_PHP} vendor/bin/composer.phar dumpautoload
-	    ##
-	    ## GIT
-	    ##
-	    ${CMD_GIT} branch develop;
-	    ${CMD_GIT} checkout develop;
-	    ${CMD_GIT} branch;
+            ##
+            ## GIT
+            ##
+            ${CMD_GIT} branch develop;
+            ${CMD_GIT} checkout develop;
+            ${CMD_GIT} branch;
         else
             echo "Problem while self-updating [Composer]."
             exit 4;
