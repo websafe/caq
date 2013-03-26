@@ -311,6 +311,7 @@ Links
  + [GNU sed] - A Unix utility that parses text and implements a programming language which can apply transformations to such text.
  + [GNU Wget] - A free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
  + [grep] - Grep is a command-line utility for searching plain-text data sets for lines matching a regular expression.
+ + [Joomla] - Joomla is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.
  + [Kohana PHP Framework] - An elegant HMVC PHP5 framework that provides a rich set of components for building web applications.
  + [Lynx] - Lynx is a highly configurable text-based web browser for use on cursor-addressable character cell terminals.
  + [PHP] - A widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.
@@ -356,3 +357,4 @@ Links
 [CodeIgniter]: https://github.com/EllisLab/CodeIgniter "CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP."
 [Drupal]: http://drupal.org/ "Drupal is an open source content management platform powering millions of websites and applications."
 [CodeIgniter]: http://ellislab.com/codeigniter "CodeIgniter is a proven, agile & open PHP web application framework with a small footprint. It is powering the next generation of web apps."
+[Joomla]: http://www.joomla.org/ "Joomla is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications."

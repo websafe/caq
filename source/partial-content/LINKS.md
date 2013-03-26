@@ -26,3 +26,4 @@
 [CodeIgniter]: https://github.com/EllisLab/CodeIgniter "CodeIgniter is an Application Development Framework - a toolkit - for people who build web sites using PHP."
 [Drupal]: http://drupal.org/ "Drupal is an open source content management platform powering millions of websites and applications."
 [CodeIgniter]: http://ellislab.com/codeigniter "CodeIgniter is a proven, agile & open PHP web application framework with a small footprint. It is powering the next generation of web apps."
+[Joomla]: http://www.joomla.org/ "Joomla is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications."
