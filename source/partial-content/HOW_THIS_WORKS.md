@@ -18,7 +18,7 @@ How caq works
 
 
 Basically, when You don't define a Skeleton Application URI (SA)
-and don't define any packages (PKG) You'll end up with an empty
+and don't define any packages (PKG/PKGD) You'll end up with an empty
 project, containing:
 
 
@@ -36,6 +36,6 @@ project, containing:
      + .gitignore
    + .gitignore
    + composer.json
+   + LICENSE
    + README.md
-   + LICENSE.md
 ~~~~
