@@ -23,19 +23,18 @@ project, containing:
 
 
 ~~~~
- + project-name
-   + vendor
-     + bin
-       + composer.phar
-     + composer
-       + ClassLoader.php
-       + autoload_classmap.php
-       + autoload_namespaces.php
-       + autoload_real.php
-     + autoload.php
-     + .gitignore
-   + .gitignore
-   + composer.json
-   + LICENSE
-   + README.md
+empty
+|-- .git
+|-- vendor
+|   |-- bin
+|   |   `-- composer.phar
+|   |-- composer
+|   |   |-- ClassLoader.php
+|   |   |-- autoload_classmap.php
+|   |   |-- autoload_namespaces.php
+|   |   `-- autoload_real.php
+|   `-- autoload.php
+|-- LICENSE
+|-- README.md
+`-- composer.json
 ~~~~
