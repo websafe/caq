@@ -15,7 +15,12 @@
         "webdeveloper",
         "script",
         "project",
-        "automation"
+        "automation",
+        "Kohana",
+        "WordPress",
+        "Drupal",
+        "Joomla",
+        "Twig"
     ],
     "homepage": "http://websafe.github.com/caq/",
     "authors": [
