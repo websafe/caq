@@ -266,6 +266,18 @@ else
         then
             echo "[Composer] self-update has finished."
             ##
+            ## Move composer.json found in skeleton (if)
+            ##
+            if [ -r composer.json ]; then
+        	${CMD_MV} composer.json composer.json.orig
+            fi
+            ##
+            ## If there was a composer.phar left by Skeleton Application, remove it
+            ##
+            if [ -r composer.phar ]; then
+        	${CMD_RM} composer.phar
+            fi
+            ##
             ##
             ##
             if [ ! -r composer.json ]; then
@@ -329,6 +341,35 @@ else
                     ##
                     ${CMD_GIT} commit composer.json \
                         -m "[caq] Added [Composer] package ${dep}."
+                else
+                    echo "Problem while installing ${dep}"
+                    exit 5;
+                fi
+            done
+            ## ----------------------------------------------------------------
+            ##
+            ##
+            ##     Installing [Composer] packages for current profile. (DEV)
+            ##
+            ##
+            ## -----------------------------------------------------------------
+            for dep in $(
+                    ## extract profile data (located at the bottom of this file.
+                    extractContent "PKGD:${CURRENT_PROFILE}" \
+                        | ${CMD_CUT} -d' ' -f1
+                );
+            do
+                echo "Starting installation of package ${dep}..."
+                ## Install dependency (composer.json gets updated too):
+                if ${CMD_PHP} vendor/bin/composer.phar \
+                    require --dev -n "${dep}";
+                then
+                    echo "Installation of package ${dep} has finished."
+                    ##
+                    ## GIT
+                    ##
+                    ${CMD_GIT} commit composer.json \
+                        -m "[caq] Added [Composer] dev-package ${dep}."
                 else
                     echo "Problem while installing ${dep}"
                     exit 5;

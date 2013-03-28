@@ -9,6 +9,7 @@ for profilesource in ../../source/profiles/*.profile; do
     echo "$profileContent"  | sed \
 	-e "s/^SA:/SA:${profileName}:/g" \
 	-e "s/^PKG:/PKG:${profileName}:/g" \
+	-e "s/^PKGD:/PKGD:${profileName}:/g" \
 	-e "s/^/### /g"
     #echo "$profileContent";
     echo "###"

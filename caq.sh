@@ -266,6 +266,18 @@ else
         then
             echo "[Composer] self-update has finished."
             ##
+            ## Move composer.json found in skeleton (if)
+            ##
+            if [ -r composer.json ]; then
+            ${CMD_MV} composer.json composer.json.orig
+            fi
+            ##
+            ## If there was a composer.phar left by Skeleton Application, remove it
+            ##
+            if [ -r composer.phar ]; then
+            ${CMD_RM} composer.phar
+            fi
+            ##
             ##
             ##
             if [ ! -r composer.json ]; then
@@ -329,6 +341,35 @@ else
                     ##
                     ${CMD_GIT} commit composer.json \
                         -m "[caq] Added [Composer] package ${dep}."
+                else
+                    echo "Problem while installing ${dep}"
+                    exit 5;
+                fi
+            done
+            ## ----------------------------------------------------------------
+            ##
+            ##
+            ##     Installing [Composer] packages for current profile. (DEV)
+            ##
+            ##
+            ## -----------------------------------------------------------------
+            for dep in $(
+                    ## extract profile data (located at the bottom of this file.
+                    extractContent "PKGD:${CURRENT_PROFILE}" \
+                        | ${CMD_CUT} -d' ' -f1
+                );
+            do
+                echo "Starting installation of package ${dep}..."
+                ## Install dependency (composer.json gets updated too):
+                if ${CMD_PHP} vendor/bin/composer.phar \
+                    require --dev -n "${dep}";
+                then
+                    echo "Installation of package ${dep} has finished."
+                    ##
+                    ## GIT
+                    ##
+                    ${CMD_GIT} commit composer.json \
+                        -m "[caq] Added [Composer] dev-package ${dep}."
                 else
                     echo "Problem while installing ${dep}"
                     exit 5;
@@ -465,21 +506,21 @@ fi
 ### PROFILE:zf2-app-full
 ### SA:zf2-app-full:git://github.com/zendframework/ZendSkeletonApplication.git
 ### PKG:zf2-app-full:zendframework/zendframework:2.1.4
-### PKG:zf2-app-full:zendframework/zend-developer-tools:*
 ### PKG:zf2-app-full:zf-commons/zfc-user:*
 ### PKG:zf2-app-full:zendframework/zendpdf:*
-### PKG:zf2-app-full:fabpot/PHP-CS-Fixer:*
-### PKG:zf2-app-full:squizlabs/PHP_CodeSniffer:*
-### PKG:zf2-app-full:phpunit/PHPUnit:3.7.*
-### PKG:zf2-app-full:phpunit/php-invoker:*
 ### PKG:zf2-app-full:doctrine/common:*
 ### PKG:zf2-app-full:doctrine/doctrine-orm-module:*
-### PKG:zf2-app-full:doctrine/phpcr-odm:*
+### #PKG:doctrine/phpcr-odm:*
 ### PKG:zf2-app-full:doctrine/data-fixtures:*
 ### PKG:zf2-app-full:doctrine/migrations:*
 ### PKG:zf2-app-full:symfony/yaml:*
-### PKG:zf2-app-full:bjyoungblood/bjy-profiler:*
-### PKG:zf2-app-full:phpdocumentor/phpdocumentor:*
+### PKGD:zf2-app-full:zendframework/zend-developer-tools:*
+### PKGD:zf2-app-full:fabpot/PHP-CS-Fixer:*
+### PKGD:zf2-app-full:squizlabs/PHP_CodeSniffer:*
+### PKGD:zf2-app-full:phpunit/PHPUnit:3.7.*
+### PKGD:zf2-app-full:phpunit/php-invoker:*
+### PKGD:zf2-app-full:bjyoungblood/bjy-profiler:*
+### PKGD:zf2-app-full:phpdocumentor/phpdocumentor:*
 ###
 ###
 ###
