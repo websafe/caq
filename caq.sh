@@ -488,7 +488,7 @@ fi
 ### Empty project with Twitter Bootstap and ZendFramework libraries in `./vendor/`.
 ###
 ### PROFILE:wbf-empty-tb-zf2
-### PKG:wbf-empty-tb-zf2:zendframework/zendframework:2.1.3
+### PKG:wbf-empty-tb-zf2:zendframework/zendframework:2.2.*
 ### PKG:wbf-empty-tb-zf2:twitter/bootstrap:*
 ###
 ###
@@ -505,7 +505,7 @@ fi
 ###
 ### PROFILE:zf2-app-full
 ### SA:zf2-app-full:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-full:zendframework/zendframework:2.1.4
+### PKG:zf2-app-full:zendframework/zendframework:2.2.*
 ### PKG:zf2-app-full:zf-commons/zfc-user:*
 ### PKG:zf2-app-full:zendframework/zendpdf:*
 ### PKG:zf2-app-full:doctrine/common:*
@@ -528,7 +528,7 @@ fi
 ###
 ### PROFILE:zf2-app-zfc-user
 ### SA:zf2-app-zfc-user:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-zfc-user:zendframework/zendframework:2.1.4
+### PKG:zf2-app-zfc-user:zendframework/zendframework:2.2.*
 ### PKG:zf2-app-zfc-user:zf-commons/zfc-user:*
 ###
 ###
@@ -537,14 +537,14 @@ fi
 ###
 ### PROFILE:zf2-app
 ### SA:zf2-app:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app:zendframework/zendframework:2.1.4
+### PKG:zf2-app:zendframework/zendframework:2.2.*
 ###
 ###
 ###
 ### Pure ZendFramework 2 project without Skeleton, only framework in vendors/.
 ###
 ### PROFILE:zf2
-### PKG:zf2:zendframework/zendframework:2.1.4
+### PKG:zf2:zendframework/zendframework:2.2.*
 ###
 ###
 ### LT:MIT:Copyright (c) <year> <copyright holders>

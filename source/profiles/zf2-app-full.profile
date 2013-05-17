@@ -4,7 +4,7 @@ libraries and lot of useful deps.
 
 PROFILE:zf2-app-full
 SA:git://github.com/zendframework/ZendSkeletonApplication.git
-PKG:zendframework/zendframework:2.1.4
+PKG:zendframework/zendframework:2.2.*
 PKG:zf-commons/zfc-user:*
 PKG:zendframework/zendpdf:*
 PKG:doctrine/common:*
