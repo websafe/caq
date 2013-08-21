@@ -441,6 +441,13 @@ fi
 ###
 ###
 ###
+### Empty project with [DirectAdmin API PHP class] in `./vendor/`.
+###
+### PROFILE:empty-directadmin
+### PKG:empty-directadmin:directadmin/directadmin:dev-master
+###
+###
+###
 ### Empty project with [Dropbox SDK for PHP] in `./vendor/`.
 ###
 ### PROFILE:empty-dropbox-sdk-php
@@ -466,6 +473,13 @@ fi
 ###
 ### PROFILE:empty-laravel
 ### PKG:empty-laravel:laravel/laravel:dev-master
+###
+###
+###
+### Empty project with [Michelf PHP Markdown] library in `./vendor/`.
+###
+### PROFILE:empty-michelf-php-markdown
+### PKG:empty-michelf-php-markdown:michelf/php-markdown:dev-master
 ###
 ###
 ###
