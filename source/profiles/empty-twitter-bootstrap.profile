@@ -1,5 +1,5 @@
 
 Empty project with Twitter Bootstap in `./vendor/`.
 
-PROFILE:twitter-bootstrap
+PROFILE:empty-twitter-bootstrap
 PKG:twitter/bootstrap:*
