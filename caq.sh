@@ -441,6 +441,13 @@ fi
 ###
 ###
 ###
+### Empty project with [Dropbox SDK for PHP] in `./vendor/`.
+###
+### PROFILE:empty-dropbox-sdk-php
+### PKG:empty-dropbox-sdk-php:dropbox/dropbox-sdk:dev-master
+###
+###
+###
 ### Empty project with [Facebook PHP SDK] in `./vendor/`.
 ###
 ### PROFILE:empty-facebook-php-sdk
@@ -450,15 +457,15 @@ fi
 ###
 ### Empty project with jQuery in `./vendor/`.
 ###
-### PROFILE:jquery
+### PROFILE:empty-jquery
 ### PKG:empty-jquery:frameworks/jquery:*
 ###
 ###
 ###
-### Empty project with [Laravel Framework] in `./vendor/`.
+### Empty project with [Laravel] in `./vendor/`.
 ###
-### PROFILE:empty-laravel-framework
-### PKG:empty-laravel-framework:laravel/framework:*
+### PROFILE:empty-laravel
+### PKG:empty-laravel:laravel/laravel:dev-master
 ###
 ###
 ###
@@ -472,7 +479,7 @@ fi
 ###
 ### Empty project with Twitter Bootstap in `./vendor/`.
 ###
-### PROFILE:twitter-bootstrap
+### PROFILE:empty-twitter-bootstrap
 ### PKG:empty-twitter-bootstrap:twitter/bootstrap:*
 ###
 ###
