@@ -441,6 +441,42 @@ fi
 ###
 ###
 ###
+### Empty project with [Facebook PHP SDK] in `./vendor/`.
+###
+### PROFILE:empty-facebook-php-sdk
+### PKG:empty-facebook-php-sdk:facebook/php-sdk:*
+###
+###
+###
+### Empty project with jQuery in `./vendor/`.
+###
+### PROFILE:jquery
+### PKG:empty-jquery:frameworks/jquery:*
+###
+###
+###
+### Empty project with [Laravel Framework] in `./vendor/`.
+###
+### PROFILE:empty-laravel-framework
+### PKG:empty-laravel-framework:laravel/framework:*
+###
+###
+###
+### Empty project with Twitter Bootstap and [Zenf Framework 2] libraries in `./vendor/`.
+###
+### PROFILE:empty-twitter-bootstrap-zf2
+### PKG:empty-twitter-bootstrap-zf2:twitter/bootstrap:*
+### PKG:empty-twitter-bootstrap-zf2:zendframework/zendframework:2.2.*
+###
+###
+###
+### Empty project with Twitter Bootstap in `./vendor/`.
+###
+### PROFILE:twitter-bootstrap
+### PKG:empty-twitter-bootstrap:twitter/bootstrap:*
+###
+###
+###
 ### Empty profile - results in an empty project with README.md, LICENSE.md,
 ### and [Composer] generated files.
 ###
@@ -482,14 +518,6 @@ fi
 ###
 ### PROFILE:twig
 ### PKG:twig:twig/twig:1.*
-###
-###
-###
-### Empty project with Twitter Bootstap and ZendFramework libraries in `./vendor/`.
-###
-### PROFILE:wbf-empty-tb-zf2
-### PKG:wbf-empty-tb-zf2:zendframework/zendframework:2.2.*
-### PKG:wbf-empty-tb-zf2:twitter/bootstrap:*
 ###
 ###
 ###
