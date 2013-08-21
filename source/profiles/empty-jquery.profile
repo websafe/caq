@@ -1,5 +1,5 @@
 
 Empty project with jQuery in `./vendor/`.
 
-PROFILE:jquery
+PROFILE:empty-jquery
 PKG:frameworks/jquery:*
