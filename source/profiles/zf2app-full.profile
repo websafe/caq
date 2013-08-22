@@ -1,8 +1,7 @@
 
-A project based on [ZendSkeletonApplication] with [ZendFramework]
-libraries and lot of useful deps.
+A [ZendSkeletonApplication] based project with [ZendFramework 2] libraries and lot of useful deps in `vendors/`.
 
-PROFILE:zf2-app-full
+PROFILE:zf2app-full
 SA:git://github.com/zendframework/ZendSkeletonApplication.git
 PKG:zendframework/zendframework:2.2.*
 PKG:zf-commons/zfc-user:*

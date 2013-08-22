@@ -1,5 +1,5 @@
 
 An empty project with [Symfony Framework] libraries.
 
-PROFILE:symfony
-PKG:symfony/symfony:*
+PROFILE:empty-symfony
+PKG:symfony/symfony:dev-master
