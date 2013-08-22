@@ -462,6 +462,20 @@ fi
 ###
 ###
 ###
+### Empty project with [AdWords PHP API Client] in `./vendor/`.
+###
+### PROFILE:empty-google-adwords-api
+### PKG:empty-google-adwords-api: google/adwords:dev-master
+###
+###
+###
+### Empty project with [PHP Client for Google APIs] in `./vendor/`.
+###
+### PROFILE:empty-google-api-client
+### PKG:empty-google-api-client:google/api-client:dev-master
+###
+###
+###
 ### Empty project with jQuery in `./vendor/`.
 ###
 ### PROFILE:empty-jquery
@@ -483,6 +497,13 @@ fi
 ###
 ###
 ###
+### An empty project with [Symfony Framework] libraries.
+###
+### PROFILE:empty-symfony
+### PKG:empty-symfony:symfony/symfony:dev-master
+###
+###
+###
 ### Empty project with Twitter Bootstap and [Zenf Framework 2] libraries in `./vendor/`.
 ###
 ### PROFILE:empty-twitter-bootstrap-zf2
@@ -498,10 +519,45 @@ fi
 ###
 ###
 ###
+### Empty project with [WP-CLI] (a command line interface for WordPress) in `./vendor/`.
+###
+### PROFILE:empty-wp-cli
+### PKG:empty-wp-cli:wp-cli/wp-cli:dev-master
+###
+###
+###
+### An empty project with [ZendFramework 2] libraries in `vendors/`.
+###
+### PROFILE:empty-zendframework
+### PKG:empty-zendframework:zendframework/zendframework:2.2.*
+###
+###
+###
+### An empty project with [ZendFramework 1] libraries in `vendors/`.
+###
+### PROFILE:empty-zendframework1
+### PKG:empty-zendframework1:zendframework/zendframework1:dev-master
+###
+###
+###
+### Empty project with [ZendFramework 2] libraries in `vendors/`.
+###
+### PROFILE:empty-zf2
+### PKG:empty-zf2:zendframework/zendframework:2.2.*
+###
+###
+###
 ### Empty profile - results in an empty project with README.md, LICENSE.md,
 ### and [Composer] generated files.
 ###
 ### PROFILE:empty
+###
+###
+###
+### An empty project with [Twig] libraries.
+###
+### PROFILE:empty-twig
+### PKG:empy-twig:twig/twig:dev-master
 ###
 ###
 ###
@@ -528,20 +584,6 @@ fi
 ###
 ###
 ###
-### An empty project with [Symfony Framework] libraries.
-###
-### PROFILE:symfony
-### PKG:symfony:symfony/symfony:*
-###
-###
-###
-### An empty project with [Twig] libraries.
-###
-### PROFILE:twig
-### PKG:twig:twig/twig:1.*
-###
-###
-###
 ### A [WordPress] based project.
 ###
 ### PROFILE:wordpress
@@ -549,51 +591,43 @@ fi
 ###
 ###
 ###
-### A project based on [ZendSkeletonApplication] with [ZendFramework]
-### libraries and lot of useful deps.
+### A [ZendSkeletonApplication] based project with [ZendFramework 2] libraries and lot of useful deps in `vendors/`.
 ###
-### PROFILE:zf2-app-full
-### SA:zf2-app-full:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-full:zendframework/zendframework:2.2.*
-### PKG:zf2-app-full:zf-commons/zfc-user:*
-### PKG:zf2-app-full:zendframework/zendpdf:*
-### PKG:zf2-app-full:doctrine/common:*
-### PKG:zf2-app-full:doctrine/doctrine-orm-module:*
+### PROFILE:zf2app-full
+### SA:zf2app-full:git://github.com/zendframework/ZendSkeletonApplication.git
+### PKG:zf2app-full:zendframework/zendframework:2.2.*
+### PKG:zf2app-full:zf-commons/zfc-user:*
+### PKG:zf2app-full:zendframework/zendpdf:*
+### PKG:zf2app-full:doctrine/common:*
+### PKG:zf2app-full:doctrine/doctrine-orm-module:*
 ### #PKG:doctrine/phpcr-odm:*
-### PKG:zf2-app-full:doctrine/data-fixtures:*
-### PKG:zf2-app-full:doctrine/migrations:*
-### PKG:zf2-app-full:symfony/yaml:*
-### PKGD:zf2-app-full:zendframework/zend-developer-tools:*
-### PKGD:zf2-app-full:fabpot/PHP-CS-Fixer:*
-### PKGD:zf2-app-full:squizlabs/PHP_CodeSniffer:*
-### PKGD:zf2-app-full:phpunit/PHPUnit:3.7.*
-### PKGD:zf2-app-full:phpunit/php-invoker:*
-### PKGD:zf2-app-full:bjyoungblood/bjy-profiler:*
-### PKGD:zf2-app-full:phpdocumentor/phpdocumentor:*
+### PKG:zf2app-full:doctrine/data-fixtures:*
+### PKG:zf2app-full:doctrine/migrations:*
+### PKG:zf2app-full:symfony/yaml:*
+### PKGD:zf2app-full:zendframework/zend-developer-tools:*
+### PKGD:zf2app-full:fabpot/PHP-CS-Fixer:*
+### PKGD:zf2app-full:squizlabs/PHP_CodeSniffer:*
+### PKGD:zf2app-full:phpunit/PHPUnit:3.7.*
+### PKGD:zf2app-full:phpunit/php-invoker:*
+### PKGD:zf2app-full:bjyoungblood/bjy-profiler:*
+### PKGD:zf2app-full:phpdocumentor/phpdocumentor:*
 ###
 ###
 ###
-### A project based on [ZendSkeletonApplication] with [ZfcUser] module.
+### A [ZendSkeletonApplication] based project with [ZfcUser] module and [ZendFramework 2] libraries in `vendors/`.
 ###
-### PROFILE:zf2-app-zfc-user
-### SA:zf2-app-zfc-user:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app-zfc-user:zendframework/zendframework:2.2.*
-### PKG:zf2-app-zfc-user:zf-commons/zfc-user:*
-###
-###
-###
-### A project based on [ZendSkeletonApplication] with [ZendFramework] libraries.
-###
-### PROFILE:zf2-app
-### SA:zf2-app:git://github.com/zendframework/ZendSkeletonApplication.git
-### PKG:zf2-app:zendframework/zendframework:2.2.*
+### PROFILE:zf2app-zfc-user
+### SA:zf2app-zfc-user:git://github.com/zendframework/ZendSkeletonApplication.git
+### PKG:zf2app-zfc-user:zendframework/zendframework:2.2.*
+### PKG:zf2app-zfc-user:zf-commons/zfc-user:*
 ###
 ###
 ###
-### Pure ZendFramework 2 project without Skeleton, only framework in vendors/.
+### A [ZendSkeletonApplication] based project with [ZendFramework 2] libraries in `vendors/`.
 ###
-### PROFILE:zf2
-### PKG:zf2:zendframework/zendframework:2.2.*
+### PROFILE:zf2app
+### SA:zf2app:git://github.com/zendframework/ZendSkeletonApplication.git
+### PKG:zf2app:zendframework/zendframework:2.2.*
 ###
 ###
 ### LT:MIT:Copyright (c) <year> <copyright holders>
